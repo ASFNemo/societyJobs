@@ -22,6 +22,8 @@ def login_page(request):
 
             if user is not None:
                 login(request, user)
+
+                #todo: get whether this is a company/ student or society and call the corresponding complete-reg helper function
                 return HttpResponseRedirect("/"+next_url)
 
         context = {
@@ -56,7 +58,10 @@ def register_page(request):
         return render(request, "register.html", context)
 
 
-def register_student(request):
+def register_student(request, id):
+    #check if the id is the one that matchest to their email:
+        # if yes, allow them to complete registration
+        # if no take them to the login page
     print "in their"
     print request
 
@@ -64,13 +69,13 @@ def register_student(request):
     pass
 
 
-def register_company(request):
+def register_company(request, id):
     print "in there"
     HttpResponseRedirect("/")
     pass
 
 
-def register_society(request):
+def register_society(request, id):
     print "in here"
     HttpResponseRedirect("/")
     pass

@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from application.views import home, error_404, apply_to_job
-from accounts.views import login_page, login, register_company, register_society, register_student, register_page, logout_call
+from general.views import home, error_404, apply_to_job
+from accounts.views import login_page, register_company, register_society, register_student, register_page, logout_call
 
 urlpatterns = [
     url(r'^$', home),
@@ -24,13 +24,13 @@ urlpatterns = [
     # account URLS
     url(r'^login$', login_page),
     url(r'^register$', register_page),
-    url(r'^complete_registration/company$', register_company),
-    url(r'^complete_registration/student$', register_student),
-    url(r'^complete_registration/society$', register_society),
+    url(r'^complete_registration/company/(?P<object_id>\d+)$', register_company),
+    url(r'^complete_registration/student/(?P<object_id>\d+)$', register_student),
+    url(r'^complete_registration/society/(?P<object_id>\d+)$', register_society),
     url(r'^logout$', logout_call),
 
 
-    #application URLs
+    #general URLs
     url(r'^apply$', apply_to_job),
 
     #admin URLS
