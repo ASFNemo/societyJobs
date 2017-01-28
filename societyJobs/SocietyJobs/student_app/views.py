@@ -5,8 +5,9 @@ from django.contrib.auth.decorators import login_required
 
 @login_required()
 def apply_to_job(request):
+    print "need to sort out git"
     return render(request, "applytojob.html")
 
 @login_required()
-def customised_student_home(request, userID):
+def customised_student_home(request):
     pass

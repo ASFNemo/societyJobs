@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^register/company$', company_reg),
     url(r'^register/society$', society_reg),
     url(r'^complete_registration/company/(?P<object_id>\d+)$', complete_company_registration),
-    url(r'^complete_registration/student/(?P<object_id>\d+)$', complete_student_registration),
+    url(r'^complete_registration/student/(?P<id>\d+)$', complete_student_registration),
     url(r'^complete_registration/society/(?P<object_id>\d+)$', complete_society_registration),
     url(r'^logout$', logout_call),
 
@@ -52,5 +52,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # 404 -- DO NOT REMOVE
+    url(r'^404', admin.site.urls),
     url(r'^', error_404),
 ]

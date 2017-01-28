@@ -86,8 +86,10 @@ class UserChangeForm(forms.ModelForm):
         return self.initial["password"]
 
 
-class StudentDetailsForm(forms.ModelForm):
+class StudentDetailsForm(forms.Form):
 
-    class meta:
-        model = studentData
-        fields = ('first_name', 'surname', 'course', 'university', 'countryOfStudy')
+    first_name = forms.CharField()
+    surname = forms.CharField()
+    course = forms.CharField()
+    university = forms.CharField()
+    countryOfStudy = forms.CharField()

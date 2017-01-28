@@ -69,6 +69,7 @@ class MyUser(AbstractBaseUser):
 class studentData(models.Model):
 
     id = models.OneToOneField(
+        MyUser,
         primary_key=True,
     )
 
