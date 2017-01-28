@@ -93,3 +93,9 @@ class StudentDetailsForm(forms.Form):
     course = forms.CharField()
     university = forms.CharField()
     countryOfStudy = forms.CharField()
+
+
+class companyDetailsForm(forms.Form):
+    company_name = forms.CharField()
+    HQ_city = forms.CharField()
+    industry = forms.CharField()

@@ -126,3 +126,35 @@ class studentData(models.Model):
 
     def get_country_of_study(self):
         return self.countryOfStudy
+
+
+class CompanyData(models.Model):
+    id = models.OneToOneField(
+        MyUser,
+        primary_key=True,
+    )
+
+    Company_name = models.CharField(
+        verbose_name='company name',
+        max_length=255,
+        null=False
+    )
+
+    HQ_city = models.CharField(
+        verbose_name='HQ_city',
+        max_length=255,
+        null=False
+    )
+
+    description = models.CharField(
+        verbose_name="short company description",
+        max_length=5000,
+        null=True
+    )
+
+    industry = models.CharField(
+        verbose_name="company primary industry",
+        max_length=255,
+        null=False
+    )
+

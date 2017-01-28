@@ -1,10 +1,9 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, HttpResponseRedirect, Http404
 from django.contrib.auth import authenticate, login, logout
-from rest_framework import exceptions
 
-from accounts.forms import RegistrationForm, LoginForm, StudentDetailsForm
-from accounts.models import MyUser, studentData
+from accounts.forms import RegistrationForm, LoginForm, StudentDetailsForm, companyDetailsForm
+from accounts.models import MyUser, studentData, CompanyData
 
 # Create your views here.
 
@@ -31,8 +30,9 @@ def login_page(request):
                     login(request, user)
                     return HttpResponseRedirect('/home')
                 except ObjectDoesNotExist:
-                    #raise exceptions.AuthenticationFailed("no such user")
-                    return HttpResponseRedirect("complete_registration/student/"+str(user.id))
+                    account = MyUser.objects.get(id=user.id)
+                    account_type = account.get_account_tyoe()
+                    return HttpResponseRedirect("complete_registration/" + account_type +"/"+str(user.id))
         context = {
             "form": form
         }
@@ -74,7 +74,6 @@ def student_reg(request):
             #todo: send out confirmation email
 
 
-            #todo: redirect to page to complete user profile
             # get the ID so i can pass it in the URL to the complete registration page
             user_id = user.id
             return HttpResponseRedirect("/complete_registration/student/" + str(user_id))
@@ -87,7 +86,29 @@ def student_reg(request):
 
 
 def company_reg(request):
-    pass
+    if request.user.is_authenticated():
+        return HttpResponseRedirect("/")
+    else:
+        form = RegistrationForm(request.POST or None)
+        print form
+
+        if form.is_valid():
+            email = form.cleaned_data["email"]
+            password = form.cleaned_data["password2"]
+
+            print email + password
+
+            user = MyUser.objects.create_user(email=email, password=password, userType="company")
+            # todo: send out confirmation email
+
+            # get the ID so i can pass it in the URL to the complete registration page
+            user_id = user.id
+            return HttpResponseRedirect("/complete_registration/company/" + str(user_id))
+
+        else:
+            print "form is invalid"
+            # todo: add a parameter that tells them, the username or password was incorrect
+            return HttpResponseRedirect("/register")
 
 
 def society_reg(request):
@@ -118,7 +139,8 @@ def complete_student_registration(request, id):
 
         try:
             user_details = studentData.objects.get(id=id)
-            HttpResponseRedirect('/home')
+            login(request, user)
+            return HttpResponseRedirect('/home')
         except ObjectDoesNotExist:
 
             print "lets go"
@@ -143,7 +165,7 @@ def complete_student_registration(request, id):
                     "form": StudentDetailsForm(),
 
                 }
-                return render(request, "CompleteStudentRegistration.html", context)
+                return render(request, "student/CompleteStudentRegistration.html", context)
 
                 pass
             else:
@@ -154,9 +176,58 @@ def complete_student_registration(request, id):
 
 
 def complete_company_registration(request, id):
-    print "in there"
-    HttpResponseRedirect("/")
-    pass
+    # check if the id is the one that matchest to their email:
+
+
+    # print "in their"
+    # print request
+    #
+    # return HttpResponseRedirect("/")
+    if request.user.is_authenticated():
+        return HttpResponseRedirect("/")
+    else:
+        try:
+            user = MyUser.objects.get(id=id)
+
+        except ObjectDoesNotExist:
+            return HttpResponseRedirect("/register")
+        except:
+            return HttpResponseRedirect("/login")
+
+        try:
+            user_details = CompanyData.objects.get(id=id)
+            login(request, user)
+            return HttpResponseRedirect('/company_home')
+        except ObjectDoesNotExist:
+
+            if user.user_type == 'company':
+                #
+        # --------------------------------------  HERE ---------------------------------------------------------
+                #
+                form = companyDetailsForm(request.POST or None)
+
+                if form.is_valid():
+                    print "there"
+                    company_name = form.cleaned_data["company_name"]
+                    city = form.cleaned_data["HQ_city"]
+                    industry = form.cleaned_data["industry"]
+
+                    CompanyData.objects.create(id=user, Company_name=company_name, HQ_city=city, description=None, industry=industry)
+                    login(request, user)
+                    return HttpResponseRedirect("/company_home")
+                # else:
+                #     print "form is invalid"
+                context = {
+                    "form": companyDetailsForm(),
+
+                }
+                return render(request, "completeCompanyregistration.html", context)
+
+                pass
+            else:
+                return HttpResponseRedirect('/login')
+        except:
+            return HttpResponseRedirect("/404")
 
 
 def complete_society_registration(request, id):

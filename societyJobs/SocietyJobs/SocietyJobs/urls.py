@@ -19,6 +19,7 @@ from django.contrib import admin
 
 from general_app.views import home, error_404
 from student_app.views import apply_to_job, customised_student_home
+from company_app.views import company_home
 from accounts.views import login_page, complete_company_registration, complete_society_registration, \
     complete_student_registration, register_page, logout_call, student_reg, society_reg, company_reg
 
@@ -35,9 +36,9 @@ urlpatterns = [
     url(r'^register/student$', student_reg),
     url(r'^register/company$', company_reg),
     url(r'^register/society$', society_reg),
-    url(r'^complete_registration/company/(?P<object_id>\d+)$', complete_company_registration),
+    url(r'^complete_registration/company/(?P<id>\d+)$', complete_company_registration),
     url(r'^complete_registration/student/(?P<id>\d+)$', complete_student_registration),
-    url(r'^complete_registration/society/(?P<object_id>\d+)$', complete_society_registration),
+    url(r'^complete_registration/society/(?P<id>\d+)$', complete_society_registration),
     url(r'^logout$', logout_call),
 
 
@@ -46,6 +47,9 @@ urlpatterns = [
     url(r'^apply$', apply_to_job),
 
     # Society_app URLS
+
+    # Company_app URLS
+    url(r'^company_home$', company_home), # the page companies get taken to when they login
 
 
     #admin URLS
