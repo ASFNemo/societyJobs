@@ -37,6 +37,10 @@ AUTH_USER_MODEL = 'accounts.MyUser'
 
 INSTALLED_APPS = [
     'accounts',
+    'company_app',
+    'general_app',
+    'society_app',
+    'student_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SocietyJobs.wsgi.general'
+WSGI_APPLICATION = 'SocietyJobs.wsgi.application'
 
 
 # Database

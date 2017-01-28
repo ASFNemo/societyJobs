@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
-from models import MyUser
+from models import MyUser, studentData
 
 
 class LoginForm(forms.Form):
@@ -13,9 +13,11 @@ class LoginForm(forms.Form):
 
 
 class RegistrationForm(forms.Form):
+
     email = forms.CharField()
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    # user_type_field = forms.ChoiceField(choices=user_Types)
 
     def clean_password2(self):
         # Check that the two password entries match
@@ -82,3 +84,10 @@ class UserChangeForm(forms.ModelForm):
         # This is done here, rather than on the field, because the
         # field does not have access to the initial value
         return self.initial["password"]
+
+
+class StudentDetailsForm(forms.ModelForm):
+
+    class meta:
+        model = studentData
+        fields = ('first_name', 'surname', 'course', 'university', 'countryOfStudy')

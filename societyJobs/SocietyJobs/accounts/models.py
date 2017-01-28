@@ -6,7 +6,7 @@ from django.db.models.signals import post_save
 # Create your models here.
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, email, password):
+    def create_user(self, email, password, userType):
         """
         Creates and saves a User with the given email, date of
         birth and password.
@@ -18,11 +18,11 @@ class MyUserManager(BaseUserManager):
 
         user = self.model(
             email=self.normalize_email(email),
+            user_type=userType
         )
 
         user.set_password(password)
         user.save(using=self._db)
-        print "here"
         return user
 
 
@@ -33,18 +33,28 @@ class MyUser(AbstractBaseUser):
         unique=True,
     )
 
+    user_type = models.CharField(
+        verbose_name="type of user",
+        max_length=50,
+        blank=False,
+        null=False
+    )
+
     objects = MyUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['user_type']
 
-    def get_full_name(self):
+    def get_email(self):
         # The user is identified by their email address
         return self.email
 
-    def get_short_name(self):
-        # The user is identified by their email address
-        return self.email
+    def get_account_tyoe(self):
+        return self.user_type
+
+    # def get_short_name(self):
+    #     # The user is identified by their email address
+    #     return self.email
 
     def __str__(self):              # __unicode__ on Python 2
         return self.email
@@ -54,3 +64,64 @@ class MyUser(AbstractBaseUser):
         "Does the user have permissions to view the app `app_label`?"
         # Simplest possible answer: Yes, always
         return True
+
+
+class studentData(models.Model):
+
+    id = models.OneToOneField(
+        primary_key=True,
+    )
+
+    first_name = models.CharField(
+        verbose_name='student first name',
+        max_length=255,
+        null=False
+    )
+
+    countryOfStudy = models.CharField(
+        verbose_name='country of study',
+        max_length=255,
+        null=False
+    )
+
+    surname = models.CharField(
+        verbose_name='student first name',
+        max_length=255,
+        null=False
+    )
+
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+    )
+
+
+    course = models.CharField(
+        verbose_name='course name',
+        max_length=255,
+        null=True,
+    )
+    university = models.CharField(
+        verbose_name='university name',
+        max_length=255,
+        null=True,
+    )
+
+    def get_name(self):
+        return self.first_name
+
+    def get_email(self):
+        return self.email
+
+    def get_userType(self):
+        return self.user_type
+
+    def get_course(self):
+        return self.course
+
+    def get_university(self):
+        return self.university
+
+    def get_country_of_study(self):
+        return self.countryOfStudy

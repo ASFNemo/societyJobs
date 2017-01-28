@@ -11,9 +11,15 @@
 <body>
     HERE YOU CAN REGISTER
 
-    <form method="post" action="{{ action_value }}">
+    <form method="post" action="{{ action_value_student }}">
         {% csrf_token %}
-        {{ form.as_p }}
+{#        <select id="user_type" name="user_type">#}
+{#            <option value="Student">Student</option>#}
+{#            <option value="Society">Society</option>#}
+{#            <option value="Company">Company</option>#}
+{#        </select>#}
+
+        {{ form }}
         <input class="btn btn-default" type="submit" value="{{ submit_btn_value }}">
     </form>
 </body>
