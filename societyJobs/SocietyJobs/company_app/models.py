@@ -59,4 +59,4 @@ class job(models.Model):
     active = models.BooleanField(
         null=False
     )
-    active_for = models.IntegerField(default=datetime.now()+timedelta(days=100))
+    active_for = models.DateTimeField(default=datetime.now()+timedelta(days=100))

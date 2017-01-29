@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from student_app.views import customised_student_home
+from forms import FollowForm
 
 # Create your views here.
 
@@ -22,6 +23,27 @@ def profile_home(request):
     #customised_student_home
     # if the account is linked to a society
     pass
+
+
+def society_page(request, id):
+    form = FollowForm(request.POST or None)
+
+    if form.is_valid():
+
+        if request.user.is_authenticated:
+
+            if request.user.user_type == "student":
+                FollowForm.objects.get_or_create(student_id=request.user.id, society_id=id)
+        else:
+            return HttpResponseRedirect("/login")
+    # else:
+    #     print "form is invalid"
+    context = {
+        "form": FollowForm(),
+
+    }
+    return render(request, "generalPages/ViewSociety.html", context)
+
 
 
 

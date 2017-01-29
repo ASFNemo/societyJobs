@@ -5,6 +5,7 @@ from django.shortcuts import render, HttpResponseRedirect
 
 from company_app.forms import new_job
 from company_app.models import job
+from accounts.models import CompanyData
 
 
 # Create your views here.
@@ -28,16 +29,16 @@ def add_job(request):
             pay = form.cleaned_data['pay']
             application_email = form.cleaned_data['application_email']
 
-            the_job = job.objects.create(job_title=job_title, job_type=job_type, Job_description=Job_description,
-                                       job_city=job_city, pay=pay, application_email=application_email)
+            the_job = job.objects.create(company_ID=CompanyData.objects.get(id=request.user.id),
+                                         job_title=job_title, job_type=job_type, job_description=Job_description,
+                                         Job_city=job_city, pay=pay, application_email=application_email, active=True)
             return HttpResponseRedirect("/job/"+str(the_job.id))
         # else:
         #     print "form is invalid"
         context = {
             "form": new_job(),
-
         }
-        return render(request, "student/CompleteStudentRegistration.html", context)
+        return render(request, "company/AddJob.html", context)
     else:
         return HttpResponseRedirect('/Thiswilltaketo404Intentianlly')
 
@@ -45,4 +46,5 @@ def add_job(request):
 @login_required()
 def job_page(request, id):
     # this will show the page of the job
+    return render(request, "company/")
     pass
