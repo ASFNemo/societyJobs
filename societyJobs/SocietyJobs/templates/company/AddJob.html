@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post a job</title>
+</head>
+<body>
+
+    <h1> add a job </h1>
+    <form method="post" action="{{ action_value_society }}">
+        {% csrf_token %}
+        {{ form }}
+        <input class="btn btn-default" type="submit" value="post Job">
+    </form>
+
+</body>
+</html>

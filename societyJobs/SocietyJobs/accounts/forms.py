@@ -97,5 +97,14 @@ class StudentDetailsForm(forms.Form):
 
 class companyDetailsForm(forms.Form):
     company_name = forms.CharField()
+    company_website = forms.CharField()
     HQ_city = forms.CharField()
     industry = forms.CharField()
+
+
+class SocietyDetailsForm(forms.Form):
+    society_name = forms.CharField()
+    society_university = forms.CharField()
+    society_website = forms.CharField()
+    society_FB = forms.CharField()
+

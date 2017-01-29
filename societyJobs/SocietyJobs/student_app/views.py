@@ -10,4 +10,4 @@ def apply_to_job(request):
 
 @login_required()
 def customised_student_home(request):
-    pass
+    return render(request, "student/studentHomePage.html")

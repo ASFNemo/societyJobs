@@ -4,5 +4,5 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 @login_required()
-def society_home(request, ID):
-    pass
+def society_home(request):
+    return render(request, "society/societyHomePage.html")

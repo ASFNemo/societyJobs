@@ -7,6 +7,9 @@ from student_app.views import customised_student_home
 
 def home(request):
     print request.user.is_authenticated()
+    if (request.user.is_authenticated()):
+        print request.user.id
+        print request.user.user_type
     return render(request, "generalPages/home.html")
 
 
@@ -16,8 +19,9 @@ def error_404(request):
 @login_required()
 def profile_home(request):
     # if the account is linked to a student
-    customised_student_home
+    #customised_student_home
     # if the account is linked to a society
+    pass
 
 
 

@@ -2,8 +2,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, HttpResponseRedirect, Http404
 from django.contrib.auth import authenticate, login, logout
 
-from accounts.forms import RegistrationForm, LoginForm, StudentDetailsForm, companyDetailsForm
-from accounts.models import MyUser, studentData, CompanyData
+from accounts.forms import RegistrationForm, LoginForm, StudentDetailsForm, companyDetailsForm, SocietyDetailsForm
+from accounts.models import MyUser, studentData, CompanyData, SoietyData
 
 # Create your views here.
 
@@ -48,7 +48,7 @@ def register_page(request):
         form = RegistrationForm(request.POST or None)
         context = {
             "form": RegistrationForm(),
-            "action_value_society": "register/society$",
+            "action_value_society": "register/society",
             "action_value_student": "register/student",
             "action_value_company": "register/company",
             "submit_btn_value": "Register"
@@ -79,6 +79,7 @@ def student_reg(request):
             return HttpResponseRedirect("/complete_registration/student/" + str(user_id))
 
         else:
+            #todo: change this that it raises username already in use error
             print "form is invalid"
             # todo: add a parameter that tells them, the username or password was incorrect
             return HttpResponseRedirect("/register")
@@ -112,11 +113,33 @@ def company_reg(request):
 
 
 def society_reg(request):
-    pass
+    if request.user.is_authenticated():
+        return HttpResponseRedirect("/")
+    else:
+        form = RegistrationForm(request.POST or None)
+        print form
+
+        if form.is_valid():
+            email = form.cleaned_data["email"]
+            password = form.cleaned_data["password2"]
+
+            print email + password
+
+            user = MyUser.objects.create_user(email=email, password=password, userType="society")
+            # todo: send out confirmation email
+
+            # get the ID so i can pass it in the URL to the complete registration page
+            user_id = user.id
+            return HttpResponseRedirect("/complete_registration/society/" + str(user_id))
+
+        else:
+            print "form is invalid"
+            # todo: add a parameter that tells them, the username or password was incorrect
+            return HttpResponseRedirect("/register")
 
 
 def complete_student_registration(request, id):
-    print "hey"
+
 
     # check if the id is the one that matchest to their email:
 
@@ -128,7 +151,6 @@ def complete_student_registration(request, id):
     if request.user.is_authenticated():
         return HttpResponseRedirect("/")
     else:
-        print "ho"
         try:
             user = MyUser.objects.get(id=id)
 
@@ -143,12 +165,10 @@ def complete_student_registration(request, id):
             return HttpResponseRedirect('/home')
         except ObjectDoesNotExist:
 
-            print "lets go"
             if user.user_type == 'student':
                 form = StudentDetailsForm(request.POST or None)
 
                 if form.is_valid():
-                    print "there"
                     f_name = form.cleaned_data["first_name"]
                     s_name= form.cleaned_data["surname"]
                     studyCunt = form.cleaned_data["countryOfStudy"]
@@ -201,18 +221,18 @@ def complete_company_registration(request, id):
         except ObjectDoesNotExist:
 
             if user.user_type == 'company':
-                #
-        # --------------------------------------  HERE ---------------------------------------------------------
-                #
+
                 form = companyDetailsForm(request.POST or None)
 
                 if form.is_valid():
                     print "there"
                     company_name = form.cleaned_data["company_name"]
+                    website = form.cleaned_data["company_website"]
                     city = form.cleaned_data["HQ_city"]
                     industry = form.cleaned_data["industry"]
 
-                    CompanyData.objects.create(id=user, Company_name=company_name, HQ_city=city, description=None, industry=industry)
+                    CompanyData.objects.create(id=user, Company_name=company_name, company_website=website,
+                                               HQ_city=city, description=None, industry=industry)
                     login(request, user)
                     return HttpResponseRedirect("/company_home")
                 # else:
@@ -221,7 +241,7 @@ def complete_company_registration(request, id):
                     "form": companyDetailsForm(),
 
                 }
-                return render(request, "completeCompanyregistration.html", context)
+                return render(request, "company/completeCompanyregistration.html", context)
 
                 pass
             else:
@@ -231,9 +251,51 @@ def complete_company_registration(request, id):
 
 
 def complete_society_registration(request, id):
-    print "in here"
-    HttpResponseRedirect("/")
-    pass
+    print "hey"
+    if request.user.is_authenticated():
+        return HttpResponseRedirect("/")
+    else:
+        print "ho"
+        try:
+            user = MyUser.objects.get(id=id)
+
+        except ObjectDoesNotExist:
+            return HttpResponseRedirect("/register")
+        except:
+            return HttpResponseRedirect("/login")
+
+        try:
+            user_details = SoietyData.objects.get(id=id)
+            login(request, user)
+            return HttpResponseRedirect('/home')
+        except ObjectDoesNotExist:
+            print "lets "
+            if user.user_type == 'society':
+                form = SocietyDetailsForm(request.POST or None)
+
+                if form.is_valid():
+                    name = form.cleaned_data['society_name']
+                    university = form.cleaned_data['society_university']
+                    fb = form.cleaned_data['society_FB']
+                    website = form.cleaned_data['society_website']
+
+                    SoietyData.objects.create(id=user, society_name=name, society_university=university,
+                                              society_facebook=fb, society_website=website)
+                    login(request, user)
+                    return HttpResponseRedirect("/society_home")
+                # else:
+                #     print "form is invalid"
+                context = {
+                    "form": SocietyDetailsForm(),
+
+                }
+                print "go"
+                return render(request, "society/completeSocietyRegistration.html", context)
+            else:
+                return HttpResponseRedirect('/login')
+        except:
+            return HttpResponseRedirect("/thisisaknownerror")
+
 
 
 

@@ -14,12 +14,6 @@
     <h1>SIGN UP AS A STUDENT</h1>
     <form method="post" action="{{ action_value_student }}">
         {% csrf_token %}
-{#        <select id="user_type" name="user_type">#}
-{#            <option value="Student">Student</option>#}
-{#            <option value="Society">Society</option>#}
-{#            <option value="Company">Company</option>#}
-{#        </select>#}
-
         {{ form }}
         <input class="btn btn-default" type="submit" value="{{ submit_btn_value }}">
     </form>
@@ -27,12 +21,6 @@
     <h1> SIGN UP AS A SOCIETY </h1>
     <form method="post" action="{{ action_value_society }}">
         {% csrf_token %}
-{#        <select id="user_type" name="user_type">#}
-{#            <option value="Student">Student</option>#}
-{#            <option value="Society">Society</option>#}
-{#            <option value="Company">Company</option>#}
-{#        </select>#}
-
         {{ form }}
         <input class="btn btn-default" type="submit" value="{{ submit_btn_value }}">
     </form>
@@ -40,12 +28,6 @@
     <h1> SIGN UP AS A COMPANY</h1>
     <form method="post" action="{{ action_value_company }}">
         {% csrf_token %}
-{#        <select id="user_type" name="user_type">#}
-{#            <option value="Student">Student</option>#}
-{#            <option value="Society">Society</option>#}
-{#            <option value="Company">Company</option>#}
-{#        </select>#}
-
         {{ form }}
         <input class="btn btn-default" type="submit" value="{{ submit_btn_value }}">
     </form>

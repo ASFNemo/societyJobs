@@ -140,6 +140,12 @@ class CompanyData(models.Model):
         null=False
     )
 
+    company_website = models.CharField(
+        verbose_name='company name',
+        max_length=255,
+        null=False
+    )
+
     HQ_city = models.CharField(
         verbose_name='HQ_city',
         max_length=255,
@@ -158,3 +164,39 @@ class CompanyData(models.Model):
         null=False
     )
 
+class SoietyData(models.Model):
+
+    id = models.OneToOneField(
+        MyUser,
+        primary_key=True,
+    )
+
+    society_name = models.CharField(
+        verbose_name="Society name",
+        max_length=255,
+        null=False
+    )
+
+    society_university = models.CharField(
+        verbose_name="societys university",
+        max_length=255,
+        null=False
+    )
+
+    society_description = models.CharField(
+        verbose_name="short society description",
+        max_length=5000,
+        null=True
+    )
+
+    society_facebook = models.CharField(
+        verbose_name="society FB",
+        max_length=255,
+        null=True
+    )
+
+    society_website = models.CharField(
+        verbose_name="societys website",
+        max_length=255,
+        null=True
+    )
