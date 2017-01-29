@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 
 from accounts.forms import RegistrationForm, LoginForm, StudentDetailsForm, companyDetailsForm, SocietyDetailsForm
 from accounts.models import MyUser, studentData, CompanyData, SoietyData
+from accounts.helper_functions import password_check, email_check
 
 # Create your views here.
 

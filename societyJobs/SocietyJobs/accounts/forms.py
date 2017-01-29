@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from accounts.helper_functions import password_check, email_check
 
 from models import MyUser, studentData
 
@@ -24,10 +25,12 @@ class RegistrationForm(forms.Form):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
 
-        #todo: find a good password validation method to call here
-
+        if not password_check(password2):
+            raise forms.ValidationError("Passwords are not secure enough, passwords do not fill criteria.")
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError("Passwords don't match")
+
+
         return password2
 
     def clean_email(self):
@@ -36,7 +39,10 @@ class RegistrationForm(forms.Form):
             exists = MyUser.objects.get(email=email)
             raise forms.ValidationError("email already in use")
         except MyUser.DoesNotExist:
-            return email
+            if not email_check(email):
+                raise forms.ValidationError("this does not seem to be a valid email")
+            else:
+                return email
         except:
              raise forms.ValidationError("there was an error, please try again soon")
 

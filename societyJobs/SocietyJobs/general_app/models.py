@@ -7,7 +7,7 @@ from accounts.models import SoietyData, studentData
 # Create your models here.
 
 
-class CompanyData(models.Model):
+class Society_follows(models.Model):
     student_id = models.OneToOneField(
         studentData,
     )

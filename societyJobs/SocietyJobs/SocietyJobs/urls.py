@@ -58,7 +58,7 @@ urlpatterns = [
 
 
     #admin URLS
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
 
     # 404 -- DO NOT REMOVE
     url(r'^404', admin.site.urls),
