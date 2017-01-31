@@ -1,12 +1,1005 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SocietyJobs</title>
-</head>
+<html lang="en"><head><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}</style><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, height=device-height,
+                                   initial-scale=1.0, maximum-scale=1.0,
+                                   target-densityDpi=device-dpi">
+  <link rel="alternate" type="application/rss+xml" title="Jobs" href="https://demo.smartjobboard.com/rss/">
+
+  <title>SmartJobBoard</title>
+
+  <link href="https://demo.smartjobboard.com/templates/Bootstrap/assets/third-party/jquery-ui.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://demo.smartjobboard.com/templates/Bootstrap/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://demo.smartjobboard.com/templates/Bootstrap/assets/third-party/jquery.bxslider.css" rel="stylesheet">
+  <link href="https://demo.smartjobboard.com/templates/Bootstrap/assets/style/styles.css" rel="stylesheet">
+
+  <link rel="icon" href="https://demo.smartjobboard.com/templates/Bootstrap/assets/images/favicon.ico" type="image/x-icon">
+<link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet" type="text/css">
+
+
+<!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+
+
+
+  <style type="text/css">.footer-nav__link-instagram:before {
+    content: " ";
+    font-size: 12px;
+    background-repeat: no-repeat;
+    height: 14px;
+    background-position: center;
+    background-size: contain;
+background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDk3LjM5NSA5Ny4zOTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk3LjM5NSA5Ny4zOTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMTIuNTAxLDBoNzIuMzkzYzYuODc1LDAsMTIuNSw1LjA5LDEyLjUsMTIuNXY3Mi4zOTVjMCw3LjQxLTUuNjI1LDEyLjUtMTIuNSwxMi41SDEyLjUwMUM1LjYyNCw5Ny4zOTUsMCw5Mi4zMDUsMCw4NC44OTUgICBWMTIuNUMwLDUuMDksNS42MjQsMCwxMi41MDEsMEwxMi41MDEsMHogTTcwLjk0OCwxMC44MjFjLTIuNDEyLDAtNC4zODMsMS45NzItNC4zODMsNC4zODV2MTAuNDk1YzAsMi40MTIsMS45NzEsNC4zODUsNC4zODMsNC4zODUgICBoMTEuMDA4YzIuNDEyLDAsNC4zODUtMS45NzMsNC4zODUtNC4zODVWMTUuMjA2YzAtMi40MTMtMS45NzMtNC4zODUtNC4zODUtNC4zODVINzAuOTQ4TDcwLjk0OCwxMC44MjF6IE04Ni4zODcsNDEuMTg4aC04LjU3MiAgIGMwLjgxMSwyLjY0OCwxLjI1LDUuNDUzLDEuMjUsOC4zNTVjMCwxNi4yLTEzLjU1NiwyOS4zMzItMzAuMjc1LDI5LjMzMmMtMTYuNzE4LDAtMzAuMjcyLTEzLjEzMi0zMC4yNzItMjkuMzMyICAgYzAtMi45MDQsMC40MzgtNS43MDgsMS4yNS04LjM1NWgtOC45NDV2NDEuMTQxYzAsMi4xMjksMS43NDIsMy44NzIsMy44NzIsMy44NzJoNjcuODIyYzIuMTMsMCwzLjg3Mi0xLjc0MiwzLjg3Mi0zLjg3MlY0MS4xODggICBIODYuMzg3eiBNNDguNzg5LDI5LjUzM2MtMTAuODAyLDAtMTkuNTYsOC40ODUtMTkuNTYsMTguOTUzYzAsMTAuNDY4LDguNzU4LDE4Ljk1MywxOS41NiwxOC45NTMgICBjMTAuODAzLDAsMTkuNTYyLTguNDg1LDE5LjU2Mi0xOC45NTNDNjguMzUxLDM4LjAxOCw1OS41OTMsMjkuNTMzLDQ4Ljc4OSwyOS41MzN6IiBmaWxsPSIjNWQ1ZDVkIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)}
+
+
+.footer-nav__link-instagram:hover:before {
+    content: " ";  
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDk3LjM5NSA5Ny4zOTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk3LjM5NSA5Ny4zOTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMTIuNTAxLDBoNzIuMzkzYzYuODc1LDAsMTIuNSw1LjA5LDEyLjUsMTIuNXY3Mi4zOTVjMCw3LjQxLTUuNjI1LDEyLjUtMTIuNSwxMi41SDEyLjUwMUM1LjYyNCw5Ny4zOTUsMCw5Mi4zMDUsMCw4NC44OTUgICBWMTIuNUMwLDUuMDksNS42MjQsMCwxMi41MDEsMEwxMi41MDEsMHogTTcwLjk0OCwxMC44MjFjLTIuNDEyLDAtNC4zODMsMS45NzItNC4zODMsNC4zODV2MTAuNDk1YzAsMi40MTIsMS45NzEsNC4zODUsNC4zODMsNC4zODUgICBoMTEuMDA4YzIuNDEyLDAsNC4zODUtMS45NzMsNC4zODUtNC4zODVWMTUuMjA2YzAtMi40MTMtMS45NzMtNC4zODUtNC4zODUtNC4zODVINzAuOTQ4TDcwLjk0OCwxMC44MjF6IE04Ni4zODcsNDEuMTg4aC04LjU3MiAgIGMwLjgxMSwyLjY0OCwxLjI1LDUuNDUzLDEuMjUsOC4zNTVjMCwxNi4yLTEzLjU1NiwyOS4zMzItMzAuMjc1LDI5LjMzMmMtMTYuNzE4LDAtMzAuMjcyLTEzLjEzMi0zMC4yNzItMjkuMzMyICAgYzAtMi45MDQsMC40MzgtNS43MDgsMS4yNS04LjM1NWgtOC45NDV2NDEuMTQxYzAsMi4xMjksMS43NDIsMy44NzIsMy44NzIsMy44NzJoNjcuODIyYzIuMTMsMCwzLjg3Mi0xLjc0MiwzLjg3Mi0zLjg3MlY0MS4xODggICBIODYuMzg3eiBNNDguNzg5LDI5LjUzM2MtMTAuODAyLDAtMTkuNTYsOC40ODUtMTkuNTYsMTguOTUzYzAsMTAuNDY4LDguNzU4LDE4Ljk1MywxOS41NiwxOC45NTMgICBjMTAuODAzLDAsMTkuNTYyLTguNDg1LDE5LjU2Mi0xOC45NTNDNjguMzUxLDM4LjAxOCw1OS41OTMsMjkuNTMzLDQ4Ljc4OSwyOS41MzN6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)}</style>
+  
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/places_impl.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fdemo.smartjobboard.com%2F&amp;4sAIzaSyAGXeZ9l9LqnpYzbqmnwuanCTGQrBywTmk&amp;callback=_xdc_._qbwiuf&amp;token=35731"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/places_impl.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/11/stats.js"></script></head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container container-fluid">
+    <div class="logo navbar-header">
+      <a class="logo__text navbar-brand" href="https://demo.smartjobboard.com">
+        <img src="https://demo.smartjobboard.com/templates/Bootstrap/assets/images/logo.svg">
+      </a>
+    </div>
+    <div class="burger-button__wrapper burger-button__wrapper__js visible-sm visible-xs" data-target="#navbar-collapse" data-toggle="collapse">
+      <div class="burger-button"></div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <div class="visible-sm visible-xs">
+                          <ul class="nav navbar-nav navbar-left">
+            <li class="navbar__item ">
+            <a class="navbar__link" href="https://demo.smartjobboard.com/jobs/"><span>Jobs</span></a>
+                    </li>
+            <li class="navbar__item ">
+            <a class="navbar__link" href="https://demo.smartjobboard.com/companies/"><span>Companies</span></a>
+                    </li>
+            <li class="navbar__item ">
+            <a class="navbar__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job"><span>Post a Job</span></a>
+                    </li>
+            <li class="navbar__item ">
+            <a class="navbar__link" href="https://demo.smartjobboard.com/resumes/"><span>Resume Search</span></a>
+                    </li>
+            <li class="navbar__item ">
+            <a class="navbar__link" href="https://demo.smartjobboard.com/employer-products/"><span>Pricing</span></a>
+                    </li>
+    </ul>
 
-    <p> this will be the home page </p>
 
-</body>
-</html>
+        
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+                <!-- <div data-role="main" class="ui-content">
+      <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Login/Register</a>
+
+      <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+        <form method="post" action="demoform.asp">
+          <div>
+            <h3>Login information</h3>
+            <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="user" id="usrnm" placeholder="Username">
+            <label for="pswd" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="passw" id="pswd" placeholder="Password">
+            
+            <input type="submit" data-inline="true" value="Log in">
+            <input type="submit" data-inline="true" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+  -->
+  <li class="navbar__item navbar__item ">
+            <a class="navbar__link navbar__login" href="https://demo.smartjobboard.com/login/">Sign in</a>
+          </li>
+  <li class="navbar__item navbar__item__filled"><a class="navbar__link  btn__blue" href="https://demo.smartjobboard.com/registration/">Sign up</a></li>
+  
+              </ul>
+      
+    </div>
+  </div>
+</nav>
+  <div class="main-banner">
+    <div class="main-banner__wrapper">
+      <div class="container text-center">
+        <div class="main-banner__head">
+    <h1>Search <span style="color: #ffffff;">9</span> live jobs</h1>
+<p>Finding your new job just got easier</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="quick-search__frontpage">
+    <div class="container container-fluid quick-search">
+  <div class="quick-search__wrapper well">
+    <form action="https://demo.smartjobboard.com/jobs/" class="form-inline row">
+      <input type="hidden" name="listing_type[equal]" value="Job">
+            <input type="hidden" name="action" value="search">
+      <div class="form-group form-group__input ">
+        <input type="text" value="" class="form-control form-control__centered" name="keywords[all_words]" id="keywords" placeholder="Keywords">
+      </div>
+              <div class="form-group form-group__input">
+          <input type="text" name="GooglePlace[location][value]" id="GooglePlace" class="form-control form-control__google-location" value="" placeholder="Location" autocomplete="off">
+<input type="hidden" name="GooglePlace[location][radius]" value="50" id="radius" class="hidden-radius">
+
+        </div>
+                  <div class="form-group form-group__btn">
+        <button type="submit" class="quick-search__find btn btn__orange btn__bold ">Find Jobs</button>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+    <section class="main-sections main-sections__featured-companies">
+    <div class="container container-fluid featured-companies">
+      <h4 class="featured-companies__title text-center">Featured Companies</h4>
+      <div class="bx-wrapper" style="max-width: 918px;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 216px;"><div class="bx-wrapper" style="max-width: 918px;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 216px;"><ul class="featured-companies__slider featured-companies__slider__js" style="width: 4215%; position: relative; transition-duration: 0s; transform: translate3d(-1876px, 0px, 0px);"><li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/5/inventa-sample-employer/" title="Inventa Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/inventa_1_thumb.jpg" alt="testurl.com" title="Inventa Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Inventa Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        2 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li><li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/4/chilisoft-sample-employer/" title="Chilisoft Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/chilisoft_1_thumb.jpg" alt="testurl.com" title="Chilisoft Sample...">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Chilisoft Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        1 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li><li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/6/irg-sample-employer/" title="IRG Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/irg_1_thumb.jpg" alt="testurl.com" title="IRG Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>IRG Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        1 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+                  <li class="featured-company" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/3/jardini-sample-employer/" title="Jardini Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1_thumb.jpg" alt="testurl.com" title="Jardini Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Jardini Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        3 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+                  <li class="featured-company" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/5/inventa-sample-employer/" title="Inventa Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/inventa_1_thumb.jpg" alt="testurl.com" title="Inventa Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Inventa Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        2 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+                  <li class="featured-company" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/4/chilisoft-sample-employer/" title="Chilisoft Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/chilisoft_1_thumb.jpg" alt="testurl.com" title="Chilisoft Sample...">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Chilisoft Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        1 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+                  <li class="featured-company" aria-hidden="false" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/6/irg-sample-employer/" title="IRG Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/irg_1_thumb.jpg" alt="testurl.com" title="IRG Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>IRG Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        1 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+              <li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/3/jardini-sample-employer/" title="Jardini Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1_thumb.jpg" alt="testurl.com" title="Jardini Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Jardini Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        3 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li><li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/5/inventa-sample-employer/" title="Inventa Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/inventa_1_thumb.jpg" alt="testurl.com" title="Inventa Sample Employer">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Inventa Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        2 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li><li class="featured-company bx-clone" aria-hidden="true" style="float: left; list-style: none; position: relative; width: 306px;">
+            <a href="https://demo.smartjobboard.com/company/4/chilisoft-sample-employer/" title="Chilisoft Sample Employer">
+              <div class="panel panel-default featured-company__panel">
+                <div class="panel-body featured-company__panel-body">
+                                      <img class="featured-company__image" src="https://demo.smartjobboard.com/files/pictures/chilisoft_1_thumb.jpg" alt="testurl.com" title="Chilisoft Sample...">
+                                  </div>
+                <div class="panel-footer featured-company__panel-footer">
+                  <div class="featured-companies__name">
+                    <span>Chilisoft Sample Employer</span>
+                  </div>
+                  <div class="featured-companies__jobs">
+                                        1 job(s)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li></ul></div><div class="bx-controls"></div></div></div><div class="bx-controls"></div></div>
+      <span class="featured-companies__slider--arrows featured-companies__slider--prev"><a class="bx-prev" href=""></a><a class="bx-prev" href=""></a></span>
+      <span class="featured-companies__slider--arrows featured-companies__slider--next"><a class="bx-next" href=""></a><a class="bx-next" href=""></a></span>
+    </div>
+  </section>
+
+  
+
+  <section class="main-sections main-sections__middle-banner middle-banner">
+    <div class="container container-fluid text-center middle-banner__wrapper">
+      <div class="middle-banner__block--wrapper">
+        <h3>POST YOUR JOB TODAY</h3>
+<div>Job seekers will be able to find<br>your first-class job</div>
+<p><a class="btn btn__yellow btn__bold btn-post-job" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job">Post a Job</a></p>
+      </div>
+    </div>
+  </section>
+    <section class="main-sections listing__featured">
+    <div class="container container-fluid listing">
+              <h4 class="listing__title ">
+          Featured Jobs
+        </h4>
+        <div class="listing-item__list ">
+                      <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/14/credit-analyst-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/logo_emp_1.jpg" alt="Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/14/credit-analyst-job-sample/" class="link">Credit Analyst [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Sacramento, CA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    Credit Analyst should analyze financial information and assess the risks of credit offer to individuals and businesses. 
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    Credit Analyst should analyze financial information and assess the risks of credit offer to individuals and businesses. 
+    </div>
+</article>
+                      <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/19/hr-specialist-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/irg_1.jpg" alt="IRG Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/19/hr-specialist-job-sample/" class="link">HR Specialist [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                IRG Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Durango, CO, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+             This is not a real job. Please don't apply to it.    We are looking for an HR/ Office Manager. This is an opportunity to be a key part of growing the team throughout all departments.
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+         This is not a real job. Please don't apply to it.    We are looking for an HR/ Office Manager. This is an opportunity to be a key part of growing the team throughout all departments.
+    </div>
+</article>
+                      <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/23/project-manager-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1.jpg" alt="Jardini Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/23/project-manager-job-sample/" class="link">Project Manager [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Jardini Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Cambridge, MA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+             This is not a real job. Please don't apply to it.    Project manager&nbsp;is responsible for&nbsp;the planning, execution, closing of a project and&nbsp;accomplishing the stated project objectives
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+         This is not a real job. Please don't apply to it.    Project manager&nbsp;is responsible for&nbsp;the planning, execution, closing of a project and&nbsp;accomplishing the stated project objectives
+    </div>
+</article>
+                      <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/25/office-receptionist-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1.jpg" alt="Jardini Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/25/office-receptionist-job-sample/" class="link">Office Receptionist [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Jardini Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Cambridge, MA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+    </div>
+</article>
+                  </div>
+                  </div>
+  </section>
+
+    <section class="main-sections main-sections__listing__latest listing__latest">
+    <div class="container container-fluid listing">
+      <h4 class="listing__title ">Latest Jobs</h4>
+      <div class="listing-item__list ">
+                  <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/25/office-receptionist-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1.jpg" alt="Jardini Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/25/office-receptionist-job-sample/" class="link">Office Receptionist [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Jardini Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Cambridge, MA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+    </div>
+</article>
+                  <article class="media well listing-item listing-item__jobs  ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/24/office-manager-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1.jpg" alt="Jardini Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/24/office-manager-job-sample/" class="link">Office Manager [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Jardini Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Cambridge, MA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    We're looking for an&nbsp;able to multi task&nbsp;person to work as office receptionist in our developing company. 
+ The Office Receptionist would be responsible for the following duties: Schedules patient appointments. Enters appointment date and time into computerized scheduler. Records when appointments have been filled or canceled. Telephones patients to remind them of appointments. Telephones patients to reschedule missed appointments. Calls patient referrals to solicit services. 
+    </div>
+</article>
+                  <article class="media well listing-item listing-item__jobs listing-item__featured ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/23/project-manager-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/Jardini%20logo_1_1.jpg" alt="Jardini Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/23/project-manager-job-sample/" class="link">Project Manager [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Jardini Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Cambridge, MA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+             This is not a real job. Please don't apply to it.    Project manager&nbsp;is responsible for&nbsp;the planning, execution, closing of a project and&nbsp;accomplishing the stated project objectives
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+         This is not a real job. Please don't apply to it.    Project manager&nbsp;is responsible for&nbsp;the planning, execution, closing of a project and&nbsp;accomplishing the stated project objectives
+    </div>
+</article>
+                  <article class="media well listing-item listing-item__jobs  ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/22/accountant-job-sample/">
+                <img class="media-object profile__img-company" src="https://demo.smartjobboard.com/files/pictures/chilisoft_1.jpg" alt="Chilisoft Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/22/accountant-job-sample/" class="link">Accountant [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Chilisoft Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    San Francisco, CA, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    What we need: 
+ Excellent interpersonal and communication skills.&nbsp; Ability to effectively communicate orally and in writing with all levels within the organization, as well as external parties. Motivated, self-directed and results-driven approach to work, also takes ownership of assigned tasks. The ability to meet deadlines. Capable of establishing effective working relationships that promote teamwork and collaboration. Willingness and ability to resolve issues that arise in the performance of the job duties. Able to work in a dynamic and changing work environment. Proficient with MS Office Suite required Oracle experience preferred but not required. Bachelors degree in Accounting/Finance Refined products and/or pipelines experience preferred but not required. 
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    What we need: 
+ Excellent interpersonal and communication skills.&nbsp; Ability to effectively communicate orally and in writing with all levels within the organization, as well as external parties. Motivated, self-directed and results-driven approach to work, also takes ownership of assigned tasks. The ability to meet deadlines. Capable of establishing effective working relationships that promote teamwork and collaboration. Willingness and ability to resolve issues that arise in the performance of the job duties. Able to work in a dynamic and changing work environment. Proficient with MS Office Suite required Oracle experience preferred but not required. Bachelors degree in Accounting/Finance Refined products and/or pipelines experience preferred but not required. 
+    </div>
+</article>
+              </div>
+          </div>
+  </section>
+  <div class="view-all text-center ">
+    <a href="https://demo.smartjobboard.com/jobs/" class="btn view-all__btn btn__white">View all jobs</a>
+  </div>
+
+          <section class="main-sections main-sections__jobs-by jobs-by">
+      <div class="jobs-by__wrapper">
+        <div class="container container-fluid">
+          <ul class="nav nav-pills" role="tablist">
+                          <li role="presentation" class="active"><a href="#jobs-by__category" aria-controls="jobs-by__category" role="tab" data-toggle="pill">Jobs by Category</a></li>
+                                                    <li role="presentation"><a href="#jobs-by__city" aria-controls="jobs-by__city" role="tab" data-toggle="pill">Jobs by City</a></li>
+                                                    <li role="presentation"><a href="#jobs-by__state" aria-controls="jobs-by__state" role="tab" data-toggle="pill">Jobs by State</a></li>
+                                                </ul>
+                    <div class="tab-content">
+                          <div role="tabpanel" class="tab-pane fade in active" id="jobs-by__category">
+                <ul class="list-unstyled browse-by__list">
+                  <li>
+        <a href="https://demo.smartjobboard.com/categories/343/accounting-jobs/">
+          <span class="browse-by__item">Accounting</span>
+          <span class="count">(5)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/344/admin-clerical-jobs/">
+          <span class="browse-by__item">Admin-Clerical</span>
+          <span class="count">(5)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/373/management-jobs/">
+          <span class="browse-by__item">Management</span>
+          <span class="count">(2)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/346/banking-jobs/">
+          <span class="browse-by__item">Banking</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/350/consultant-jobs/">
+          <span class="browse-by__item">Consultant</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/359/finance-jobs/">
+          <span class="browse-by__item">Finance</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/360/franchise-jobs/">
+          <span class="browse-by__item">Franchise</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/367/human-resources-jobs/">
+          <span class="browse-by__item">Human Resources</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/categories/370/insurance-jobs/">
+          <span class="browse-by__item">Insurance</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                                                                                                                                                                                                                                                                                          </ul>
+              </div>
+                                                    <div role="tabpanel" class="tab-pane fade " id="jobs-by__city">
+                <ul class="list-unstyled browse-by__list">
+                  <li>
+        <a href="https://demo.smartjobboard.com/cities/jobs-in-cambridge/">
+          <span class="browse-by__item">Cambridge</span>
+          <span class="count">(3)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/cities/jobs-in-durango/">
+          <span class="browse-by__item">Durango</span>
+          <span class="count">(2)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/cities/jobs-in-sacramento/">
+          <span class="browse-by__item">Sacramento</span>
+          <span class="count">(2)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/cities/jobs-in-atlanta/">
+          <span class="browse-by__item">Atlanta</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/cities/jobs-in-san-francisco/">
+          <span class="browse-by__item">San Francisco</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+      </ul>
+
+              </div>
+                                                    <div role="tabpanel" class="tab-pane fade " id="jobs-by__state">
+                <ul class="list-unstyled browse-by__list">
+                  <li>
+        <a href="https://demo.smartjobboard.com/states/jobs-in-california/">
+          <span class="browse-by__item">California</span>
+          <span class="count">(3)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/states/jobs-in-massachusetts/">
+          <span class="browse-by__item">Massachusetts</span>
+          <span class="count">(3)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/states/jobs-in-colorado/">
+          <span class="browse-by__item">Colorado</span>
+          <span class="count">(2)</span>
+        </a>
+      </li>
+                      <li>
+        <a href="https://demo.smartjobboard.com/states/jobs-in-georgia/">
+          <span class="browse-by__item">Georgia</span>
+          <span class="count">(1)</span>
+        </a>
+      </li>
+      </ul>
+
+              </div>
+                                                </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-sections main-sections__alert alert">
+    <div class="container container-fluid">
+      <div class="alert__block subscribe__description">
+        <h3>Sign up for job alerts</h3>
+<div>Get job alerts straight to your inbox.</div>
+<div>Enter your email to get started. You will be able to unsubscribe at any moment.</div>
+      </div>
+      <div class="alert__block alert__block-form">
+        <form action="https://demo.smartjobboard.com/guest-alerts/create/" method="post" id="create-alert" class="well alert__form">
+          <input type="hidden" name="action" value="save">
+          <div class="alert__messages">
+          </div>
+          <div class="form-group alert__form__input">
+            <input type="email" class="form-control" name="email" value="" placeholder="Your email">
+          </div>
+          <div class="form-group alert__form__input">
+            <select class="form-control" name="email_frequency">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="form-group alert__form__input text-center">
+            <input type="submit" name="save" value="Create alert" class="btn__submit-modal btn btn__orange btn__bold" onclick="return createAlert();">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="page-row hidden-print">
+  
+  <footer class="footer">
+    <div class="container">
+            <div>
+<div>
+<ul>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/">Home</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/contact/">Contact</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/about/">About Us </a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/terms-of-use/">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Employer</li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job">Post a Job</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/resumes/">Search Resumes</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Job Seeker</li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/jobs/">Find Jobs</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Resume">Create Resume</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-facebook">Facebook</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-twitter" href="#">Twitter</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-plus" href="#">Google Plus</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-in" href="#">LinkedIn</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-instagram" href="#">Instagram</a></li>
+</ul>
+</div>
+</div>
+<div>© 2008-2017 Powered by <a title="Job Board Software, Script" href="http://www.smartjobboard.com" target="_blank">SmartJobBoard Job Board Software</a></div>
+    </div>
+  </footer>
+  </div>
+
+  <script src="https://demo.smartjobboard.com/templates/Bootstrap/assets/third-party/jquery.min.js"></script>
+  <script src="https://demo.smartjobboard.com/templates/Bootstrap/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://demo.smartjobboard.com/templates/Bootstrap/assets/third-party/jquery.bxslider.min.js"></script>
+
+  <script language="JavaScript" type="text/javascript" src="https://demo.smartjobboard.com/templates/_system/common_js/main.js"></script>
+  <script language="JavaScript" type="text/javascript" src="https://demo.smartjobboard.com/templates/_system/common_js/multilist_functions.js"></script>
+  <script language="JavaScript" type="text/javascript" src="https://demo.smartjobboard.com/templates/Bootstrap/assets/third-party/jquery.form.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGXeZ9l9LqnpYzbqmnwuanCTGQrBywTmk&amp;libraries=places&amp;callback=initService&amp;language=en" async="" defer=""></script>
+  
+   
+    <script>
+        function initService() {
+            var input = /** @type  */($('.form-control__google-location'));
+            var options = {
+                componentRestrictions: {
+                                    }
+            };
+
+            for(var i=0; i<input.length; i++){
+                new google.maps.places.Autocomplete(input[i], options);
+            }
+
+        }
+
+        $('#ajax-refine-search').on('click', '.refine-search__item-radius', function(e) {
+            e.preventDefault();
+            var radiusValue = $(this).data('value');
+
+            $('.hidden-radius').each(function() {
+                $(this).val(radiusValue);
+            });
+
+            $('#refine-block-radius .dropdown-toggle').text($(this).data('value') + ' miles');
+            $('.quick-search__wrapper').find('form').submit();
+        });
+
+        $('#GooglePlace').keydown(function (e) {
+            if (e.which == 13 && $('.pac-container:visible').length) {
+                return false;
+            }
+        });
+    </script>
+ 
+    <script>
+        $('.navbar__link').on('click', function(e) {
+            if ($(this).attr('href') == '' || $(this).attr('href') == 'http://' ||
+                    $(this).attr('href') == 'https://' || $(this).attr('href') == '#') {
+                e.preventDefault();
+            }
+        });
+
+        $('.dropdown > a').on('touchstart', function (e) {
+            var link = $(this);
+            if (link.hasClass('hover')) {
+                return true;
+            } else {
+                link.addClass('hover');
+                $('.dropdown > a').not(this).removeClass('hover');
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).on('click', function (e) {
+            var dropdown = $('.navbar__link.hover').closest('.navbar__item');
+
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+                dropdown.find('.navbar__link.hover').removeClass('hover');
+            }
+        });
+    </script>
+ 
+    <script type="text/javascript">
+      var oneSlide = {
+        auto: true,
+        infiniteLoop: true,
+        minSlides: 1,
+        maxSlides: 1,
+        slideWidth: 306,
+        moveSlides: 1,
+        pager: false,
+        useCSS: true,
+        responsive: true,
+        nextSelector: '.featured-companies__slider--next',
+        prevSelector: '.featured-companies__slider--prev',
+        nextText: '',
+        prevText: ''
+      };
+      var twoSlides = {
+        auto: true,
+        infiniteLoop: true,
+        minSlides: 1,
+        maxSlides: 2,
+        slideWidth: 306,
+        moveSlides: 1,
+        pager: false,
+        useCSS: true,
+        responsive: true,
+        nextSelector: '.featured-companies__slider--next',
+        prevSelector: '.featured-companies__slider--prev',
+        nextText: '',
+        prevText: ''
+      };
+      var threeSlides = {
+        auto: true,
+        infiniteLoop: true,
+        minSlides: 1,
+        maxSlides: 3,
+        slideWidth: 306,
+        moveSlides: 1,
+        pager: false,
+        useCSS: true,
+        responsive: true,
+        nextSelector: '.featured-companies__slider--next',
+        prevSelector: '.featured-companies__slider--prev',
+        nextText: '',
+        prevText: ''
+      };
+      var slider;
+      if ($(document).width() > 680 && $(document).width() <= 1200) {
+        slider = $('.featured-companies__slider__js').bxSlider(twoSlides);
+      }
+      else if ($(document).width() <= 680) {
+        slider = $('.featured-companies__slider__js').bxSlider(oneSlide);
+      }
+      else {
+        slider = $('.featured-companies__slider__js').bxSlider(threeSlides);
+      }
+      $(window).on('resize orientationchange', function() {
+        if ($(document).width() > 680 && $(document).width() <= 1200) {
+          slider.destroySlider();
+          slider.reloadSlider(twoSlides);
+        }
+        if($(document).width() <= 680) {
+          slider.destroySlider();
+          slider.reloadSlider(oneSlide);
+        }
+        if ($(document).width() > 1200){
+          slider.destroySlider();
+          slider.reloadSlider(threeSlides);
+        }
+      });
+    </script>
+   
+    <script language="javascript" type="text/javascript">
+      document.addEventListener("touchstart", function() { }, false);
+
+      function createAlert() {
+        var options = {
+          target: '.alert__messages',
+          url:  $('#create-alert').attr('action'),
+          success: function(data) {
+            if (data) {
+              $('#create-alert').find('.form-control[name="email"]').text('').val('');
+              $('#create-alert').find('.btn').blur();
+            }
+            $('.alert__messages').find('#create-alert').remove();
+          }
+        };
+        $('#create-alert').ajaxSubmit(options);
+        return false;
+      }
+
+      $(document).ready(function() {
+        $('.nav-pills li').on('click', function() {
+          var current = $('.nav-pills').scrollLeft();
+          var left = $(this).position().left;
+
+          if ( $( this ).is(':first-child') ) {
+            $('.nav-pills').scrollLeft(0);
+          } else {
+            $('.nav-pills').animate({
+              scrollLeft: current + left - 15
+            }, 300);
+          }
+        });
+      });
+    </script>
+  
+
+<div class="pac-container pac-logo" style="display: none; width: 378px; position: absolute; left: 597px; top: 476px;"></div><div class="pac-container pac-logo" style="display: none; width: 378px; position: absolute; left: 597px; top: 476px;"></div></body></html>
