@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      
+        Profile &middot; 
+      
+    </title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="assets/css/toolkit.css" rel="stylesheet">
+    
+    <link href="assets/css/application.css" rel="stylesheet">
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+    </style>
+
+  </head>
+
+
+<body class="with-top-navbar">
+  
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/brand-white.png" alt="brand">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
+        <ul class="nav navbar-nav hidden-xs">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li class="active">
+            <a href="profile/index.html">Profile</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+          <!-- <li >
+            <a class="app-notifications" href="notifications/index.html">
+              <span class="icon icon-bell"></span>
+            </a>
+          </li> -->
+          <li>
+            <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+              <img class="img-circle" src="assets/img/avatar-dhg.png">
+            </button>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-right app-search" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" data-action="grow" placeholder="Search">
+          </div>
+        </form>
+
+        <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile/index.html">Profile</a></li>
+          <li><a href="editprofile.html">Edit Profile</a></li>
+          <hr>
+          <li><a href="setting.html">settings</a></li>
+          <li><a href="login/index.html">Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav hidden">
+          <li><a href="editprofile.html">Edit Profile</a></li>
+          <hr>
+          <li><a href="setting.html">settings</a></li>
+          <li><a href="login/index.html">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+
+<div class="profile-header text-center"
+     style="background-image: url(assets/img/iceland.jpg);">
+  <div class="container">
+    <div class="container-inner">
+      <img class="img-circle" src="assets/img/avatar-dhg.png">
+      <h3 class="profile-header-user">{user name}</h3>
+      <p class="profile-header-bio">
+        {User introduction}
+      </p>
+    </div>
+  </div>
+
+
+
+
+<!--   <nav class="profile-header-nav">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#">Photos</a>
+      </li>
+      <li>
+        <a href="#">Others</a>
+      </li>
+      <li>
+        <a href="#">Anothers</a>
+      </li>
+    </ul>
+  </nav> -->
+</div>
+
+<h1>HERE THERE SHOULD BE SOMETHING LIKE THE LINKEDIN PROFILE WHERE THEY SPECIFY WHERE THEY HAVE WORKED AND WHAT THEY HAVE STUDIED</h1>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){
+        if (window.BS&&window.BS.loader&&window.BS.loader.length) {
+          while(BS.loader.length){(BS.loader.pop())()}
+        }
+      })
+    </script>
+  </body>
+</html>
+
