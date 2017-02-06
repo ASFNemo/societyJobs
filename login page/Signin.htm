@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://demo.smartjobboard.com/login/ -->
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<meta name="keywords" content="Society jobs sign in">
+	<meta name="description" content="Society Jobs sign in">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0,target-densityDpi=device-dpi">
+	<!-- <link rel="alternate" type="application/rss+xml" title="Jobs" href="https://demo.smartjobboard.com/rss/"> -->
+
+	<title>Sign in | Society Jobs</title>
+
+	<link href="./Signin_files/jquery-ui.css" rel="stylesheet">
+	<link href="./Signin_files/bootstrap.min.css" rel="stylesheet">
+	<link href="./Signin_files/bootstrap-datepicker.min.css" rel="stylesheet">
+
+	<link href="./Signin_files/styles.css" rel="stylesheet">
+
+	<link rel="icon" href="" type="image/x-icon"> <!-- Put the site icon in here -->
+	<link href="./Sign in_files/fira.css" rel="stylesheet" type="text/css">
+</head>
+<body cz-shortcut-listen="true">
+	<nav class="navbar navbar-default">
+	<div class="container container-fluid">
+		<div class="logo navbar-header">
+			<a class="logo__text navbar-brand" href="https://societyjobs.co"> <!-- add logo here-->
+				<img src="./Signin_files/logo.svg"> <!-- add logo here  -->
+			</a>
+		</div>
+		<div class="burger-button__wrapper burger-button__wrapper__js visible-sm visible-xs" data-target="#navbar-collapse" data-toggle="collapse">
+			<div class="burger-button"></div>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<div class="visible-sm visible-xs">
+				<ul class="nav navbar-nav navbar-left">
+            		<li class="navbar__item ">
+            			<a class="navbar__link" href="https://societyjobs.co/jobs"><span>Jobs</span></a>
+                	</li>
+           			<li class="navbar__item "></li>
+    			</ul>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="navbar__item navbar__item active">
+					<a class="navbar__link navbar__login" href="https://societyjobs.co/login">Sign in</a>
+				</li>
+				<li class="navbar__item navbar__item__filled">
+					<a class="navbar__link  btn__blue" href="https://societyjobs.co/register/">Sign up</a>
+				</li>
+			</ul>
+			<div class="visible-md visible-lg">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="navbar__item ">
+            			<a class="navbar__link" href="https://societyjobs.co/jobs/"><span>Jobs</span></a>
+                    </li>
+    			</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+	<div id="loading">
+	</div>
+<!-- 	<div class="modal fade" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="message-modal-label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<h4 class="modal-title" id="message-modal-label">Modal title</h4>
+				</div>
+				<div class="modal-body">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="flash-messages"></div>
+	<div class="page-row page-row-expanded">
+		<div class="container container--small  ">
+			<form class="form form__modal" action="" method="post" id="login-form" novalidate=""> <!-- url where the information from the form should go--> 
+				<input type="hidden" name="return_url" value="">
+				<input type="hidden" name="action" value="login">
+				<h1 class="title__primary title__primary-small title__centered title__bordered">Sign in</h1>
+	
+				<div class="form-group">
+					<input type="email" name="username" class="form-control" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<input type="password" name="password" class="form-control" placeholder="Password">
+				</div>
+	<!-- 			<div class="form-group text-center">
+					<input type="checkbox" name="keep" id="keep">
+					<label for="keep" class="form-label checkbox-label"> Keep me signed in</label>
+				</div> -->
+				<div class="form-group form-group__btns text-center">
+					<input type="submit" value="Sign in" class="btn btn__orange btn__bold">
+				</div>
+				<div class="form-group login-help text-center">
+					<a class="link" href="https://societyJobs/recover-password">Forgot Your Password?</a>
+					<div>
+						<a class="link" href="https://societyjobs.co/register/company$">Employer Registration</a>&nbsp;|&nbsp;
+						<a class="link" href="https://societyjobs.co/register/student">Student Registration</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="page-row hidden-print">
+		<footer class="footer">
+		<div class="container">
+			<div>
+<!-- <div>
+<ul>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/">Home</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/contact/">Contact</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/about/">About Us </a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/terms-of-use/">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Employer</li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job">Post a Job</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/resumes/">Search Resumes</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Job Seeker</li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/jobs/">Find Jobs</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Resume">Create Resume</a></li>
+<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-facebook">Facebook</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-twitter" href="https://demo.smartjobboard.com/login/#">Twitter</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-plus" href="https://demo.smartjobboard.com/login/#">Google Plus</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-in" href="https://demo.smartjobboard.com/login/#">LinkedIn</a></li>
+<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-instagram" href="https://demo.smartjobboard.com/login/#">Instagram</a></li>
+</ul>
+</div>
+</div> -->
+			<div>©<a title="Job Board Software, Script" href="http://societyjobs.co" target="_blank">Society Jobs</a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="./Sign in_files/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./Sign in_files/bootstrap.min.js"></script>
+
+	<script src="./Sign in_files/jquery-ui.min.js"></script>
+
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/main.js"></script>
+	<!--<script language="JavaScript" type="text/javascript" src="./Sign in_files/jquery.form.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/jquery.validate.min.js"></script> 
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/autoupload_functions.js"></script>-->
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/imagesize.js"></script>
+	<link rel="Stylesheet" type="text/css" href="./Sign in_files/jquery.multiselect.css">
+	<!--<script language="JavaScript" type="text/javascript" src="./Sign in_files/jquery.multiselect.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/multilist_functions.js"></script> -->
+	<!--<script>
+		document.addEventListener("touchstart", function() { }, false);
+
+		var langSettings = {
+			thousands_separator : ',',
+			decimal_separator : '.',
+			decimals : '2',
+			currencySign: '$',
+			showCurrencySign: 1,
+			currencySignLocation: '0',
+			rightToLeft: 0
+		};
+	</script> -->
+	<!-- <script language="JavaScript" type="text/javascript" src="./Sign in_files/floatnumbers_functions.js"></script> -->
+
+	<script language="JavaScript" type="text/javascript" src="./Sign in_files/bootstrap-datepicker.min.js"></script>
+	
+	<!--<script language="javascript" type="text/javascript">
+
+		// Set global javascript value for page
+		window.SJB_GlobalSiteUrl = 'https://demo.smartjobboard.com';
+		window.SJB_UserSiteUrl   = 'https://demo.smartjobboard.com';
+
+	</script> -->
+
+	
+	
+	 
+    <!--<script>
+        $('.navbar__link').on('click', function(e) {
+            if ($(this).attr('href') == '' || $(this).attr('href') == 'http://' ||
+                    $(this).attr('href') == 'https://' || $(this).attr('href') == '#') {
+                e.preventDefault();
+            }
+        });
+
+        $('.dropdown > a').on('touchstart', function (e) {
+            var link = $(this);
+            if (link.hasClass('hover')) {
+                return true;
+            } else {
+                link.addClass('hover');
+                $('.dropdown > a').not(this).removeClass('hover');
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).on('click', function (e) {
+            var dropdown = $('.navbar__link.hover').closest('.navbar__item');
+
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+                dropdown.find('.navbar__link.hover').removeClass('hover');
+            }
+        }); -->
+    </script>
+
+
+	<script>
+		function message(title, content) {
+			var modal = $('#message-modal');
+			modal.find('.modal-title').html(title);
+			modal.find('.modal-body').html(content);
+			modal.modal('show');
+		}
+	</script>
+
+</body></html>

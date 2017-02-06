@@ -42,11 +42,14 @@ urlpatterns = [
     url(r'^complete_registration/student/(?P<id>\d+)$', complete_student_registration),
     url(r'^complete_registration/society/(?P<id>\d+)$', complete_society_registration),
     url(r'^logout$', logout_call),
+    # /edit-profile - to change profile data
+    # /terms-of-use
 
 
     # student_app URLS
     url(r'^home$', customised_student_home),
     url(r'^apply$', apply_to_job),
+
 
     # Society_app URLS
     url(r'^society_home$', society_home), # the page societys get taken to when they login
@@ -56,6 +59,9 @@ urlpatterns = [
     url(r'^add_job$', add_job),
     url(r'^job/(?P<id>\d+)$', job),
 
+
+    #urls to add
+     # recoverpassword = for if the user has forgotten their password
 
     #admin URLS
     # url(r'^admin/', admin.site.urls),

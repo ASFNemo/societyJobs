@@ -1,4 +1,4 @@
-
+{% load staticfiles %}
 
 
 <!DOCTYPE html>
@@ -18,10 +18,9 @@
     </title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-    <link href="../../../static\static_root\admin\css\Society\toolkit.css" rel="stylesheet">
+    <link href="{%   static 'static_root/admin/css/Society/toolkit.css'%}" rel="stylesheet">
     
-    <link href="../../../static\static_root\admin\css\Society\application.css" rel="stylesheet">
-
+    <link href="{% static 'static_root/admin/css/Society/application.css' %}" rel="stylesheet">
 
 
     <style>
