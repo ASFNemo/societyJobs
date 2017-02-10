@@ -12,7 +12,7 @@ from accounts.models import CompanyData
 
 @login_required()
 def company_home(request):
-    return render(request, "company/companyHomePage.html")
+    return render(request, "company/companyProfilePage.html")
 
 @login_required()
 def add_job(request):

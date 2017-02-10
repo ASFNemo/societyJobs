@@ -25,7 +25,8 @@ def home(request):
 
 
 def error_404(request):
-    return render(request, "generalPages/404.html")
+    # return render(request, "generalPages/404.html")
+    return render(request, "company/companyProfilePage.html")
 
 @login_required()
 def profile_home(request):
