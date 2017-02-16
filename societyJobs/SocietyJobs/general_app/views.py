@@ -22,7 +22,7 @@ def home(request):
     else:
         # show the latest 2 jobs
         pass
-    return render(request, "generalPages/JobPage.html")
+    return render(request, "generalPages/home.html")
 
 
 

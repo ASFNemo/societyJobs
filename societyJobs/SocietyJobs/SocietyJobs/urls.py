@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^register/company$', company_reg),
     url(r'^register/society$', society_reg),
     url(r'^complete_registration/company/(?P<id>\d+)$', complete_company_registration),
-    url(r'^complete_registration/student/(?P<id>\d+)$', complete_student_registration),
+    url(r'^complete_registration/student$', complete_student_registration),
     url(r'^complete_registration/society/(?P<id>\d+)$', complete_society_registration),
     url(r'^logout$', logout_call),
 
