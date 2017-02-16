@@ -1,14 +1,438 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> [Society NAME] </title>
+<!-- saved from url=(0065)https://demo.smartjobboard.com/company/5/inventa-sample-employer/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="keywords" content="SocietyJobs {employer name} page">
+    <meta name="description" content="Jobs at {employer name} and infomation about them on SocietyJobs">
+    <meta name="viewport" content="width=device-width, height=device-height,
+                                   initial-scale=1.0, maximum-scale=1.0,
+                                   target-densityDpi=device-dpi">
+    <link rel="alternate" type="application/rss+xml" title="Jobs" href="https://societyjobs.co/">
+
+    <title>Jobs at {employer name}| SocietyJobs</title>
+
+    <link href="http://www.45he12.com/Statics/companyprofilepage/jquery-ui.css" rel="stylesheet">
+    <link href="http://www.45he12.com/Statics/companyprofilepage/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://www.45he12.com/Statics/companyprofilepage/styles.css" rel="stylesheet">
+
+    <link rel="icon" href="https://demo.smartjobboard.com/templates/Bootstrap/assets/images/favicon.ico" type="image/x-icon">
+    <link href="http://www.45he12.com/Statics/companyprofilepage/fira.css" rel="stylesheet" type="text/css">
+
 </head>
-<body>
-    <form method="post" action="">
-        {% csrf_token %}
-        {{ form }}
-        <input class="btn btn-default" type="submit" value="follow">
-    </form>
-</body>
-</html>
+<body cz-shortcut-listen="true">
+<nav class="navbar navbar-default">
+    <div class="container container-fluid">
+        <div class="logo navbar-header">
+            <a class="logo__text navbar-brand" href="https://societyjobs.co"> <!-- add logo here-->
+                <img src="./Signin_files/logo.svg"> <!-- add logo here  -->
+            </a>
+        </div>
+        <div class="burger-button__wrapper burger-button__wrapper__js visible-sm visible-xs" data-target="#navbar-collapse" data-toggle="collapse">
+            <div class="burger-button"></div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="visible-sm visible-xs">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar__item ">
+                        <a class="navbar__link" href="https://societyjobs.co/jobs"><span>Jobs</span></a>
+                    </li>
+                    <li class="navbar__item "></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navbar__item navbar__item active">
+                    <a class="navbar__link navbar__login" href="https://societyjobs.co/login">Sign in</a>
+                </li>
+                <li class="navbar__item navbar__item__filled">
+                    <a class="navbar__link  btn__blue" href="https://societyjobs.co/register/">Sign up</a>
+                </li>
+            </ul>
+            <div class="visible-md visible-lg">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar__item ">
+                        <a class="navbar__link" href="https://societyjobs.co/jobs/"><span>Jobs</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="page-row page-row-expanded">
+    <div class="display-item">
+        <div class="details-header">
+            <div class="container">
+                <div class="results">
+                    <a href="javascript:history.go(-1)" class="btn__back">Back</a>
+                </div>
+                <h1 class="details-header__title">{Society name}</h1>
+                <ul class="listing-item__info">
+                    <li class="listing-item__info--item listing-item__info--item-location">{Society university}</li>
+                    <li class="listing-item__info--item listing-item__info--item-website"><a href="{{Society web page}}" target="_blank">{{Society web page}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container details-body details-body__company-profile">
+            <div class="row">
+        	   <div class="sidebar col-xs-10 profile col-xs-offset-1 col-sm-offset-0 pull-right">
+                    <div class="sidebar__content">
+					   <div class="text-center profile__image">
+					       <img class="profile__img profile__img-company" src="http://www.45he12.com/Statics/companyprofilepage/inventa_1.jpeg" alt="">
+				        </div>
+						<div class="profile__info">
+				            <div class="profile__info__description content-text"><p>{Society description}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 details-body__left companies-jobs-list">
+{#                    <div class="search-results__top clearfix">#}
+{#                        <h3 class="search-results__title">{number of jobs by employer} job(s) at {Employer name}</h3>#}
+{#                    </div>#}
+                    <div class="search-results listing">
+                        <!-- This is the job posting -->
+                    	<article class="media well listing-item listing-item__jobs  ">
+                            <div class="media-left listing-item__logo">
+                                <a href="https://societyjobs/jobs/{JobID}"><img class="media-object profile__img-company" src="{Employer logo asset url}" alt="{Employer name}"></a>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading listing-item__title">
+                                    <a href="https://societyjobs.co/jobs/{Job id}" class="link">{Job title}</a>
+                                </div>
+                                <div class="listing-item__info clearfix">
+                                    <span class="listing-item__info--item listing-item__info--item-company">{Employer name}</span>
+                                    <span class="listing-item__info--item listing-item__info--item-location">{employer location}</span>
+                                </div>
+                                <div class="listing-item__desc hidden-sm hidden-xs">
+                                    {Job description}
+                                </div>
+                            </div>
+                            <div class="media-right text-right">
+                                <div class="listing-item__date">
+                                    {Date job posted}
+                                </div>
+                                <span class="listing-item__employment-type">{Job type}</span>
+                            </div>
+                            <div class="listing-item__desc visible-sm visible-xs">
+                                {Job description}
+                            </div>
+                        </article>
+
+              <!--
+						<article class="media well listing-item listing-item__jobs  ">
+            <div class="media-left listing-item__logo">
+            <a href="https://demo.smartjobboard.com/job/20/services-senior-manager-job-sample/">
+                <img class="media-object profile__img-company" src="./Jobs at Inventa Sample Employer _ SmartJobBoard_files/inventa_1.jpg" alt="Inventa Sample Employer">
+            </a>
+        </div>
+        <div class="media-body">
+        <div class="media-heading listing-item__title">
+            <a href="https://demo.smartjobboard.com/job/20/services-senior-manager-job-sample/" class="link">Services Senior Manager [Job Sample]</a>
+        </div>
+        <div class="listing-item__info clearfix">
+            <span class="listing-item__info--item listing-item__info--item-company">
+                Inventa Sample Employer
+            </span>
+                            <span class="listing-item__info--item listing-item__info--item-location">
+                    Durango, CO 81303, United States
+                </span>
+                    </div>
+        <div class="listing-item__desc hidden-sm hidden-xs">
+              This is not a real job. Please don't apply to it.    Advisory Services professionals strive to help clients improve business performance, comply with regulatory requirements, and achieve sustainable value over time. Our approach incorporates the balancing of risk and control considerations with the more traditional performance and cost factors. Advisory professionals are also able to provide clients with relevant industry and functional skills where they need them most. We are currently seeking a Senior Associate to join us in our Los Angeles office, focused on the Aerospace &amp; Defense industry.
+        </div>
+    </div>
+    <div class="media-right text-right">
+        <div class="listing-item__date">
+            Jan 24, 2013
+        </div>
+                                    <span class="listing-item__employment-type">Full time</span>
+                        </div>
+    <div class="listing-item__desc visible-sm visible-xs">
+          This is not a real job. Please don't apply to it.    Advisory Services professionals strive to help clients improve business performance, comply with regulatory requirements, and achieve sustainable value over time. Our approach incorporates the balancing of risk and control considerations with the more traditional performance and cost factors. Advisory professionals are also able to provide clients with relevant industry and functional skills where they need them most. We are currently seeking a Senior Associate to join us in our Los Angeles office, focused on the Aerospace &amp; Defense industry.
+    </div>
+</article>
+-->
+
+                    <button type="button" class="load-more btn btn__white hidden" data-backfilling="false" data-page="2">
+                        Load more
+                    </button>
+                </div>
+                    </div>
+    </div>
+</div>
+
+
+
+            <div id="apply-modal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title">Modal Window</h4>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-row hidden-print">
+
+	<footer class="footer">
+        <div class="container">
+            <!-- <div>
+                <div>
+                    <ul>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/">Home</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/contact/">Contact</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/about/">About Us </a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/terms-of-use/">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                    <li>Employer</li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job">Post a Job</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/resumes/">Search Resumes</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                    <li>Job Seeker</li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/jobs/">Find Jobs</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Resume">Create Resume</a></li>
+                    <li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                    <li><a class="footer-nav__link footer-nav__link-social footer-nav__link-facebook">Facebook</a></li>
+                    <li><a class="footer-nav__link footer-nav__link-social footer-nav__link-twitter" href="https://demo.smartjobboard.com/edit-profile/#">Twitter</a></li>
+                    <li><a class="footer-nav__link footer-nav__link-social footer-nav__link-plus" href="https://demo.smartjobboard.com/edit-profile/#">Google Plus</a></li>
+                    <li><a class="footer-nav__link footer-nav__link-social footer-nav__link-in" href="https://demo.smartjobboard.com/edit-profile/#">LinkedIn</a></li>
+                    <li><a class="footer-nav__link footer-nav__link-social footer-nav__link-instagram" href="https://demo.smartjobboard.com/edit-profile/#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div>
+                © Created by <a title="Job Board Software, Script" href="http://www.societyjobs.co" target="_blank">Society Jobs</a>
+            </div>
+        </div>
+    </footer>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://www.45he12.com/Statics/companyprofilepage/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://www.45he12.com/Statics/companyprofilepage/bootstrap.min.js"></script>
+
+    <script src="http://www.45he12.com/Statics/companyprofilepage/jquery-ui.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/main.js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/jquery.form.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/jquery.validate.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/autoupload_functions.js"></script>
+    <link rel="Stylesheet" type="text/css" href="http://www.45he12.com/Statics/companyprofilepage/jquery.multiselect.css">
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/jquery.multiselect.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/multilist_functions.js"></script>
+    <script>
+        document.addEventListener("touchstart", function() { }, false);
+        var langSettings = {
+            thousands_separator : ',',
+            decimal_separator : '.',
+            decimals : '2',
+            currencySign: '$',
+            showCurrencySign: 1,
+            currencySignLocation: '0',
+            rightToLeft: 0
+        };
+    </script>
+    <script language="JavaScript" type="text/javascript" src="http://www.45he12.com/Statics/companyprofilepage/floatnumbers_functions.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        // Set global javascript value for page
+        window.SJB_GlobalSiteUrl = 'https://demo.smartjobboard.com';
+        window.SJB_UserSiteUrl   = 'https://demo.smartjobboard.com';
+        $("#apply-modal")
+                .on('show.bs.modal', function(event){
+                    var button = $(event.relatedTarget);
+                    var titleData = button.data('title');
+                    $(this).find('.modal-title').text(titleData);
+                    if (button.data('applied')) {
+                        $(this).find('.modal-body').html('<p class="alert alert-danger">You already applied to this job</p>');
+                    } else {
+                        $(this).find('.modal-body').load(button.data('href'), function() {
+                            $(this).find('.form-control').focus().select()
+                        });
+                    }
+                })
+                .on('shown.bs.modal', function(){
+                    $(this).find('.form-control').first().focus().select();
+                });
+        $('.toggle--refine-search').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('collapsed');
+            $('.refine-search__wrapper').toggleClass('show');
+            $(document).mouseup(function (e) {
+                var container = $(".refine-search");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    $('.toggle--refine-search').removeClass('collapsed');
+                    $('.refine-search__wrapper').removeClass('show');
+                }
+            });
+        });
+        $('#apply-modal').on('click', '.email-frequency__btn-js', function(){
+            $('.email-frequency__btn-js').each(function(){
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+        })
+    </script>
+
+
+    <script>
+        function initService() {
+            var input = /** @type  */($('.form-control__google-location'));
+            var options = {
+                componentRestrictions: {
+                                    }
+            };
+            for(var i=0; i<input.length; i++){
+                new google.maps.places.Autocomplete(input[i], options);
+            }
+        }
+        $('#ajax-refine-search').on('click', '.refine-search__item-radius', function(e) {
+            e.preventDefault();
+            var radiusValue = $(this).data('value');
+            $('.hidden-radius').each(function() {
+                $(this).val(radiusValue);
+            });
+            $('#refine-block-radius .dropdown-toggle').text($(this).data('value') + ' miles');
+            $('.quick-search__wrapper').find('form').submit();
+        });
+        $('#GooglePlace').keydown(function (e) {
+            if (e.which == 13 && $('.pac-container:visible').length) {
+                return false;
+            }
+        });
+    </script>
+
+    <script>
+        $(document).on('ready', function() {
+            var website = $('.listing-item__info--item-website a');
+            var href = website.attr('href');
+            if (href && !href.match(/^http([s]?):\/\/.*/)) {
+                website.attr('href', 'http://' + href);
+            }
+        });
+    </script>
+
+	<script>
+		var listingPerPage = 20;
+		var listingNumber = '';
+		$(document).ready(function() {
+			// refine search
+			var ajaxUrl = "https://demo.smartjobboard.com/ajax/";
+			var ajaxParams = {
+				'action': 'get_refine_search_block',
+				'listing_type[equal]': 'Job',
+				'searchId': '1486314302.8359',
+				'showRefineFields': 2 > 0
+			};
+			$.get(ajaxUrl, ajaxParams, function (data) {
+				if (data.length > 0) {
+					$('.current-search').remove();
+					$('#ajax-refine-search').find('.refine-search__wrapper .refine-search__block').remove();
+					$('#ajax-refine-search').find('.refine-search__wrapper').append(data);
+					$('.refine-search__wrapper').removeClass('loading');
+					$('.refine-search__item-radius.active').removeClass('active');
+					var miles = $('.form-group__input input[type="hidden"]').val();
+					$('#refine-block-radius .dropdown-toggle').text(miles + ' miles');
+				}
+			});
+			if (listingNumber != '' && listingNumber < listingPerPage) {
+				$('.load-more').trigger('click');
+			}
+		});
+		$('.load-more').click(function() {
+			var self = $(this);
+			self.addClass('loading');
+			if (self.data('backfilling')) {
+				var page = self.data('backfilling-page');
+				self.data('backfilling-page', parseInt(page) + 1);
+				// request to listings providers
+				var ajaxUrl = "https://demo.smartjobboard.com/ajax/";
+				var ajaxParams = {
+					'action' : 'request_for_listings',
+					'searchId' : '1486314302.8359',
+					'page' : page
+				};
+				$.get(ajaxUrl, ajaxParams, function(data) {
+					if (data.length > 0) {
+						$('.no-listings-found').hide();
+					} else {
+						self.prop('disabled', true);
+						$('.no-listings-found').removeClass('hidden');
+					}
+					self.before(data);
+					if ($('.listing_item__backfilling').length < listingPerPage) {
+						self.hide();
+					}
+					self.removeClass('loading');
+				});
+				return;
+			}
+			$.get('?searchId=1486314302.8359&action=search&page=' + self.data('page'), function(data) {
+				var listings = $(data).find('.listing-item');
+				self.removeClass('loading');
+				if (listings.length) {
+					$('.listing-item').last().after(listings);
+					self.data('page', parseInt(self.data('page')) + 1);
+				}
+				if (listings.length !== listingPerPage) {
+					if ('') {
+						self.data('backfilling', true);
+						$('.load-more').click();
+					} else {
+						self.hide();
+					}
+				}
+			});
+		});
+	</script>
+
+    <script>
+        $('.navbar__link').on('click', function(e) {
+            if ($(this).attr('href') == '' || $(this).attr('href') == 'http://' ||
+                    $(this).attr('href') == 'https://' || $(this).attr('href') == '#') {
+                e.preventDefault();
+            }
+        });
+        $('.dropdown > a').on('touchstart', function (e) {
+            var link = $(this);
+            if (link.hasClass('hover')) {
+                return true;
+            } else {
+                link.addClass('hover');
+                $('.dropdown > a').not(this).removeClass('hover');
+                e.preventDefault();
+                return false;
+            }
+        });
+        $(document).on('click', function (e) {
+            var dropdown = $('.navbar__link.hover').closest('.navbar__item');
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+                dropdown.find('.navbar__link.hover').removeClass('hover');
+            }
+        });
+    </script>
+
+
+
+</body></html>

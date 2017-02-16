@@ -2,9 +2,10 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponseRedirect
 from student_app.views import customised_student_home
-from forms import FollowForm
+from forms import FollowForm, JobSearchForm
 from company_app.models import job
 from models import Society_follows
+from helper_functions import search_job_helper
 
 # Create your views here.
 
@@ -21,12 +22,30 @@ def home(request):
     else:
         # show the latest 2 jobs
         pass
-    return render(request, "generalPages/home.html")
+    return render(request, "generalPages/JobPage.html")
+
 
 
 def error_404(request):
     # return render(request, "generalPages/404.html")
-    return render(request, "company/companyProfilePage.html")
+    return render(request, "generalPages/home.html")
+
+def search_page(request):
+    search_array = []
+    if request.GET['search_keywords'] != "":
+        search_array.append(request.GET['search_keywords'])
+    else:
+        search_array.append(0)
+
+    if request.GET['search_Society'] != "":
+        search_array.append(request.GET['search_Society'])
+    else:
+        search_array.append(0)
+
+    search_job_helper(request, search_array)
+
+
+    return render(request, "generalPages/JobSearchPage.html")
 
 @login_required()
 def profile_home(request):

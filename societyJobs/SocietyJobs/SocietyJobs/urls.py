@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 
-from general_app.views import home, error_404, society_page
+from general_app.views import home, error_404, society_page, search_page
 from student_app.views import apply_to_job, customised_student_home
 from company_app.views import company_home, add_job, job
 from society_app.views import society_home
@@ -30,6 +30,8 @@ urlpatterns = [
     # general_app URLs
     url(r'^$', home),
     url(r'^society/(?P<id>\d+)$', society_page),
+    url(r'^search', search_page),
+    # url(r'^termsofuse', search_page),
 
 
     # account URLS
@@ -61,6 +63,6 @@ urlpatterns = [
     # url(r'^admin/', admin.site.urls),
 
     # 404 -- DO NOT REMOVE
-    url(r'^404', admin.site.urls),
+    # url(r'^404', admin.site.urls),
     url(r'^', error_404),
 ]

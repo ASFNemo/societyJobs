@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://demo.smartjobboard.com/registration/?user_group_id=Employer -->
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}</style>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<meta name="keywords" content="SocietyJobs Society Registration">
+	<meta name="description" content="Register your society for an account on Societyjobs">
+	<meta name="viewport" content="width=device-width, height=device-height,
+                                   initial-scale=1.0, maximum-scale=1.0,
+                                   target-densityDpi=device-dpi">
+	<link rel="alternate" type="application/rss+xml" title="Jobs" href="https://societyjobs.co">
+
+	<title>Registration | SocietyJobs</title>
+
+	<link href="./Registration _ SmartJobBoard_files/jquery-ui.css" rel="stylesheet">
+	<link href="./Registration _ SmartJobBoard_files/bootstrap.min.css" rel="stylesheet">
+	<link href="./Registration _ SmartJobBoard_files/bootstrap-datepicker.min.css" rel="stylesheet">
+
+	<link href="./Registration _ SmartJobBoard_files/styles.css" rel="stylesheet">
+
+	<link rel="icon" href="https://demo.smartjobboard.com/templates/Bootstrap/assets/images/favicon.ico" type="image/x-icon">
+	
+<script type="text/javascript" charset="UTF-8" src="./Registration _ SmartJobBoard_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Registration _ SmartJobBoard_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./Registration _ SmartJobBoard_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./Registration _ SmartJobBoard_files/places_impl.js"></script><link rel="stylesheet" type="text/css" id="u0" href="./Registration _ SmartJobBoard_files/skin.min.css"><script type="text/javascript" charset="UTF-8" src="./Registration _ SmartJobBoard_files/stats.js"></script></head>
+<body cz-shortcut-listen="true">
+	<nav class="navbar navbar-default">
+    <div class="container container-fluid">
+        <div class="logo navbar-header">
+            <a class="logo__text navbar-brand" href="https://societyjobs.co"> <!-- add logo here-->
+                <img src="./Signin_files/logo.svg"> <!-- add logo here  -->
+            </a>
+        </div>
+        <div class="burger-button__wrapper burger-button__wrapper__js visible-sm visible-xs" data-target="#navbar-collapse" data-toggle="collapse">
+            <div class="burger-button"></div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="visible-sm visible-xs">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar__item ">
+                        <a class="navbar__link" href="https://societyjobs.co/jobs"><span>Jobs</span></a>
+                    </li>
+                    <li class="navbar__item "></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="navbar__item navbar__item active">
+                    <a class="navbar__link navbar__login" href="https://societyjobs.co/login">Sign in</a>
+                </li>
+                <li class="navbar__item navbar__item__filled">
+                    <a class="navbar__link  btn__blue" href="https://societyjobs.co/register/">Sign up</a>
+                </li>
+            </ul>
+            <div class="visible-md visible-lg">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="navbar__item ">
+                        <a class="navbar__link" href="https://societyjobs.co/jobs/"><span>Jobs</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="loading"></div>
+<div class="modal fade" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="message-modal-label">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h4 class="modal-title" id="message-modal-label">Modal title</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="flash-messages">
+</div>
+<div class="page-row page-row-expanded">
+	<div class="container container--small  ">
+		<h1 class="title__primary title__primary-small title__centered title__bordered">Create Society Profile</h1>
+		<div class="text-center form-group cloud">
+			I already have an Society account.
+			<a class="link" href="/login/">Sign me in</a>
+		</div>
+
+		<form class="form" method="post" action="https://demo.smartjobboard.com/registration/?user_group_id=Employer" enctype="multipart/form-data" id="registr-form">
+			<input type="hidden" name="action" value="register">
+			<input type="hidden" name="return_url" value="">
+			<input type="hidden" name="form_token" value="664244323a10834263ee475a6b38540c">
+			<div class="form-group form-group__half username">
+				<label class="form-label">Email *</label>
+				<span id="am_username" class="form-message form-message__error"></span>
+				<input type="email" value="" class="form-control" name="username" onblur="checkField($(this), &#39;username&#39;)">
+			</div>
+			<div class="form-group form-group__half fullname">
+				<label class="form-label">Full Name </label>
+				<input id="FullName" type="text" value="" class="form-control " name="FullName">
+			</div>
+			<div class="form-group form-group__half">
+			    <label class="form-label">Password *</label>
+			    <input type="password" name="password[original]" class="form-control">
+			</div>
+			<div class="form-group form-group__half">
+			    <label class="form-label">Confirm Password *</label>
+			    <input type="password" name="password[confirmed]" class="form-control">
+			</div>
+			<div class="form-group form-group__half companyname">
+				<label class="form-label">Company Name *</label>
+				<input id="CompanyName" type="text" value="" class="form-control " name="CompanyName">
+			</div>
+			<div class="form-group form-group__half website">
+				<label class="form-label">Website </label>
+				<input id="WebSite" type="text" value="" class="form-control " name="WebSite">
+			</div>
+			<div class="form-group form-group__half phone">
+				<label class="form-label">Phone </label>
+				<input id="Phone" type="text" value="" class="form-control " name="Phone">
+			</div>
+			<div class="form-group form-group__half googleplace">
+				<label class="form-label">City/Country</label>
+				<input id="GooglePlace" type="text" value="" class="form-control" name="GooglePlace" placeholder="Enter a location" autocomplete="off">
+			</div>
+			<div class="form-group logo">
+				<label class="form-label">Logo </label>
+				<div id="logo_field_content_Logo" class="form--move-left profile-logo">
+				<input type="file" id="autoloadFileSelect_Logo" field_id="Logo" field_action="upload_profile_logo" field_target="logo_field_content_Logo" name="Logo" class="form-control">
+			</div>
+<!-- 		</div>
+			<div class="form-group companydescription">
+				<label class="form-label">Company Description </label>
+				<div id="mceu_12" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; width: 555px;"><div id="mceu_12-body" class="mce-container-body mce-stack-layout"><div id="mceu_13" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group"><div id="mceu_13-body" class="mce-container-body mce-stack-layout"><div id="mceu_14" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div id="mceu_14-body" class="mce-container-body mce-flow-layout"><div id="mceu_15" class="mce-container mce-flow-layout-item mce-first mce-last mce-btn-group" role="group"><div id="mceu_15-body"><div id="mceu_0" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_0" role="button" aria-label="Bold"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_1" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_1" role="button" aria-label="Italic"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div id="mceu_2" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_2" role="button" aria-label="Underline"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-underline"></i></button></div><div id="mceu_3" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_3" role="button" aria-label="Insert/edit link"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div><div id="mceu_4" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_4" role="button" aria-label="Numbered list"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-numlist"></i></button></div><div id="mceu_5" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_5" role="button" aria-label="Bullet list"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button></div><div id="mceu_6" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_6" role="button" aria-label="Decrease indent"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-outdent"></i></button></div><div id="mceu_7" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_7" role="button" aria-label="Increase indent"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-indent"></i></button></div><div id="mceu_8" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_8" role="button" aria-label="Align left"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_9" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_9" role="button" aria-label="Align center"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_10" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_10" role="button" aria-label="Align right"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_11" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_11" role="button" aria-label="Justify"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div></div></div></div></div><div id="mceu_16" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="CompanyDescription_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" src="javascript:&quot;&quot;" style="width: 100%; height: 116px; display: block;" src="./Registration _ SmartJobBoard_files/saved_resource.html"></iframe></div><div id="mceu_17" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><div id="mceu_17-body" class="mce-container-body mce-flow-layout"><div id="mceu_18" class="mce-path mce-flow-layout-item mce-first"><div role="button" class="mce-path-item mce-last" data-index="0" tabindex="-1" id="mceu_18-0" aria-level="0">p</div></div><div id="mceu_19" class="mce-flow-layout-item mce-last mce-resizehandle"><i class="mce-ico mce-i-resize"></i></div></div></div></div></div><textarea id="CompanyDescription" name="CompanyDescription" class="" aria-hidden="true" style="display: none;"></textarea>
+			</div> -->
+			<div class="form-group">
+				<label class="form-label hidden-xs-480"></label>
+				<div class="form--move-left">
+					<div class="inline-block checkbox-field">
+						<input type="checkbox" name="terms" checked="checked" id="terms">
+					</div>
+					<span class="form-label inline">
+						<a class="link" target="_blank" href="https://demo.smartjobboard.com/terms-of-use/">I agree to the terms of use *</a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group form-group__btns text-center">
+				<input type="hidden" name="user_group_id" value="Employer">
+				<input type="submit" class="btn btn__orange btn__bold" value="Register">
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+<div class="page-row hidden-print">
+	
+	<footer class="footer">
+		<div class="container">
+			<!-- <div>
+				<div>
+					<ul>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/">Home</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/contact/">Contact</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/about/">About Us </a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/terms-of-use/">Terms &amp; Conditions</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+					<li>Employer</li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Job">Post a Job</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/resumes/">Search Resumes</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+					<li>Job Seeker</li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/jobs/">Find Jobs</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/add-listing/?listing_type_id=Resume">Create Resume</a></li>
+					<li><a class="footer-nav__link" href="https://demo.smartjobboard.com/login/">Sign in</a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+					<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-facebook">Facebook</a></li>
+					<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-twitter" href="https://demo.smartjobboard.com/edit-profile/#">Twitter</a></li>
+					<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-plus" href="https://demo.smartjobboard.com/edit-profile/#">Google Plus</a></li>
+					<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-in" href="https://demo.smartjobboard.com/edit-profile/#">LinkedIn</a></li>
+					<li><a class="footer-nav__link footer-nav__link-social footer-nav__link-instagram" href="https://demo.smartjobboard.com/edit-profile/#">Instagram</a></li>
+					</ul>
+				</div>
+			</div> -->
+			<div>
+				© Created by <a title="Job Board Software, Script" href="http://www.societyjobs.co" target="_blank">Society Jobs</a>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="./Registration _ SmartJobBoard_files/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./Registration _ SmartJobBoard_files/bootstrap.min.js"></script>
+
+	<script src="./Registration _ SmartJobBoard_files/jquery-ui.min.js"></script>
+
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/main.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/jquery.form.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/jquery.validate.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/autoupload_functions.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/imagesize.js"></script>
+	<link rel="Stylesheet" type="text/css" href="./Registration _ SmartJobBoard_files/jquery.multiselect.css">
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/jquery.multiselect.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/multilist_functions.js"></script>
+	<script>
+		document.addEventListener("touchstart", function() { }, false);
+
+		var langSettings = {
+			thousands_separator : ',',
+			decimal_separator : '.',
+			decimals : '2',
+			currencySign: '$',
+			showCurrencySign: 1,
+			currencySignLocation: '0',
+			rightToLeft: 0
+		};
+	</script>
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/floatnumbers_functions.js"></script>
+
+	<script language="JavaScript" type="text/javascript" src="./Registration _ SmartJobBoard_files/bootstrap-datepicker.min.js"></script>
+	
+	<script language="javascript" type="text/javascript">
+
+		// Set global javascript value for page
+		window.SJB_GlobalSiteUrl = 'https://demo.smartjobboard.com';
+		window.SJB_UserSiteUrl   = 'https://demo.smartjobboard.com';
+
+	</script>
+
+	
+	
+	 
+    <script>
+        function initService() {
+            var input = /** @type  */(document.getElementById('GooglePlace'));
+            var options = {
+                componentRestrictions: {
+                                    }
+            };
+            $(input).change(function() {
+                document.getElementById('City').value =
+                        document.getElementById('Country').value =
+                                document.getElementById('ZipCode').value =
+                                        document.getElementById('State').value =
+                                                document.getElementById('Latitude').value =
+                                                        document.getElementById('Longitude').value = '';
+            });
+            var autocomplete = new google.maps.places.Autocomplete(input, options);
+            autocomplete.addListener('place_changed', function() {
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    window.alert("Autocomplete's returned place contains no geometry");
+                    return;
+                }
+
+                // Get each component of the address from the place details
+                // and fill the corresponding field on the form.
+                for (var i = 0; i < place.address_components.length; i++) {
+                    var addressType = place.address_components[i].types[0];
+                    var val = place.address_components[i]['long_name'];
+                    switch (addressType) {
+                        case 'locality':
+                            document.getElementById('City').value = val;
+                            break;
+                        case 'country':
+                            document.getElementById('Country').value = val;
+                            break;
+                        case 'postal_code':
+                            document.getElementById('ZipCode').value = val;
+                            break;
+                        case 'administrative_area_level_1':
+                            document.getElementById('State').value = val;
+                            break;
+                    }
+                }
+                document.getElementById('Latitude').value = place.geometry.location.lat();
+                document.getElementById('Longitude').value = place.geometry.location.lng();
+            });
+            $('#GooglePlace').keydown(function (e) {
+                if (e.which == 13 && $('.pac-container:visible').length) {
+                    return false;
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript" src="./Registration _ SmartJobBoard_files/js" async="" defer=""></script>
+ <script src="./Registration _ SmartJobBoard_files/tinymce.min.js"></script><script>var tinyconfig = { selector: 'textarea', height:'116px', width:'555px' , menubar: false, relative_urls: false, convert_urls: false, browser_spellcheck: true,plugins: ['autolink link paste'],toolbar: 'bold italic underline link numlist bullist outdent indent alignleft aligncenter alignright alignjustify',valid_elements: 'br,p[style],span[style],ol[style],ul[style],li[style],em[style],a[style|href|target|title],strong[style]', content_css: window.SJB_UserSiteUrl + '/system/ext/tinymce/themes/advanced/skins/default/content.css' };</script><script>tinymce.init({content_css: window.SJB_UserSiteUrl + '/system/ext/tinymce/themes/advanced/skins/default/content.css', selector: '[name="CompanyDescription"]', height:'116px', width:'555px' , menubar: false, relative_urls: false, convert_urls: false, browser_spellcheck: true,plugins: ['autolink link paste'],toolbar: 'bold italic underline link numlist bullist outdent indent alignleft aligncenter alignright alignjustify',valid_elements: 'br,p[style],span[style],ol[style],ul[style],li[style],em[style],a[style|href|target|title],strong[style]' });</script> 
+	<script type="text/javascript" language="JavaScript">
+		function checkField( obj, name ) {
+			if (obj.val() != "") {
+				var options = {
+					data: { isajaxrequest: 'true', type: name },
+					success: showResponse
+				};
+				$("#registr-form").ajaxSubmit( options );
+			}
+			function showResponse(responseText, statusText, xhr, $form) {
+				var mes = "";
+				switch(responseText) {
+					case 'NOT_VALID_EMAIL_FORMAT':
+						obj.closest('.form-group').find('.form-label').addClass('form-label__error').text('Please enter valid email address');
+						break;
+					case 'NOT_UNIQUE_VALUE':
+						obj.closest('.form-group').find('.form-label').addClass('form-label__error').text('This email address is already in use.');
+						break;
+					case '1':
+						mes = "";
+						if (name == 'username') {
+							obj.closest('.form-group').find('.form-label').removeClass('form-label__error').text('Email *');
+						}
+						else {
+							obj.closest('.form-group').find('.form-label').removeClass('form-label__error').text(name + ' ');
+						}
+						break;
+				}
+				$("#am_" + name).text(mes);
+			}
+		};
+	</script>
+ 
+    <script>
+        $('.navbar__link').on('click', function(e) {
+            if ($(this).attr('href') == '' || $(this).attr('href') == 'http://' ||
+                    $(this).attr('href') == 'https://' || $(this).attr('href') == '#') {
+                e.preventDefault();
+            }
+        });
+
+        $('.dropdown > a').on('touchstart', function (e) {
+            var link = $(this);
+            if (link.hasClass('hover')) {
+                return true;
+            } else {
+                link.addClass('hover');
+                $('.dropdown > a').not(this).removeClass('hover');
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).on('click', function (e) {
+            var dropdown = $('.navbar__link.hover').closest('.navbar__item');
+
+            if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+                dropdown.find('.navbar__link.hover').removeClass('hover');
+            }
+        });
+    </script>
+
+
+	<script>
+		function message(title, content) {
+			var modal = $('#message-modal');
+			modal.find('.modal-title').html(title);
+			modal.find('.modal-body').html(content);
+			modal.modal('show');
+		}
+	</script>
+
+<div class="pac-container pac-logo hdpi" style="display: none; width: 318px; position: absolute; left: 648px; top: 669px;"></div></body></html>
